@@ -4,6 +4,8 @@ import math
 import random
 import time
 
+# python vav_emulator.py -a 192.168.68.105/24 --port 47809
+
 import BAC0
 from BAC0.core.devices.local.factory import (
     analog_input, analog_output,
