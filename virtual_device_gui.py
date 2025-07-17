@@ -9,6 +9,7 @@ A graphical interface for the Virtual BACnet Device Simulator with:
 • Real-time console output
 • Progress bar for object creation
 • Save/Load configuration
+• Helpful tooltips for all settings
 
 Usage:
     python virtual_device_gui.py
@@ -24,7 +25,34 @@ import time
 import queue
 import subprocess
 import os
+import socket
 from pathlib import Path
+
+class ToolTip:
+    """Simple tooltip implementation for widgets"""
+    def __init__(self, widget, text):
+        self.widget = widget
+        self.text = text
+        self.widget.bind("<Enter>", self.enter)
+        self.widget.bind("<Leave>", self.leave)
+        self.tooltip = None
+
+    def enter(self, event=None):
+        x = self.widget.winfo_rootx() + 25
+        y = self.widget.winfo_rooty() + 25
+        
+        self.tooltip = tk.Toplevel(self.widget)
+        self.tooltip.wm_overrideredirect(True)
+        self.tooltip.wm_geometry(f"+{x}+{y}")
+        
+        label = tk.Label(self.tooltip, text=self.text, background="lightyellow",
+                        relief="solid", borderwidth=1, font=("Arial", 9), wraplength=300)
+        label.pack()
+
+    def leave(self, event=None):
+        if self.tooltip:
+            self.tooltip.destroy()
+            self.tooltip = None
 
 class VirtualDeviceGUI:
     def __init__(self, root):
@@ -45,6 +73,32 @@ class VirtualDeviceGUI:
         
         # Start output monitoring
         self.monitor_output()
+        
+    def get_local_ip(self):
+        """Get the local IP address"""
+        try:
+            # Connect to a remote address to get local IP
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(("8.8.8.8", 80))
+            local_ip = s.getsockname()[0]
+            s.close()
+            return local_ip
+        except:
+            return "192.168.1.100"
+    
+    def generate_device_ip(self, base_ip=None):
+        """Generate a unique IP address for this device"""
+        if base_ip is None:
+            # Use the actual local IP address of this machine
+            local_ip = self.get_local_ip()
+            return local_ip
+        return base_ip
+    
+    def auto_generate_ip(self):
+        """Auto-detect the local IP address"""
+        new_ip = self.generate_device_ip()
+        self.ip_var.set(new_ip)
+        self.log_message(f"✔ Auto-detected local IP: {new_ip}")
         
     def create_widgets(self):
         # Create main frame with notebook for tabs
@@ -86,24 +140,51 @@ class VirtualDeviceGUI:
         device_frame.columnconfigure(1, weight=1)
         
         # Port
-        ttk.Label(device_frame, text="Port:").grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
+        port_label = ttk.Label(device_frame, text="Port:")
+        port_label.grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
         self.port_var = tk.StringVar(value="47809")
-        ttk.Entry(device_frame, textvariable=self.port_var, width=10).grid(row=0, column=1, sticky=(tk.W, tk.E))
+        port_entry = ttk.Entry(device_frame, textvariable=self.port_var, width=10)
+        port_entry.grid(row=0, column=1, sticky=(tk.W, tk.E))
+        ToolTip(port_label, "UDP port for BACnet communication\n• Standard BACnet port is 47808\n• Use different ports to avoid conflicts\n• Range: 1024-65535")
+        
+        # IP Address
+        ip_label = ttk.Label(device_frame, text="IP Address:")
+        ip_label.grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
+        ip_frame = ttk.Frame(device_frame)
+        ip_frame.grid(row=1, column=1, sticky=(tk.W, tk.E))
+        ip_frame.columnconfigure(0, weight=1)
+        
+        self.ip_var = tk.StringVar(value=self.generate_device_ip())
+        ip_entry = ttk.Entry(ip_frame, textvariable=self.ip_var)
+        ip_entry.grid(row=0, column=0, sticky=(tk.W, tk.E))
+        auto_ip_btn = ttk.Button(ip_frame, text="Auto", command=self.auto_generate_ip, width=6)
+        auto_ip_btn.grid(row=0, column=1, padx=(5, 0))
+        ToolTip(ip_label, "IP address for BACnet communication\n• Must be unique on your network\n• Auto-detects your local network\n• Click 'Auto' to regenerate automatically")
+        ToolTip(auto_ip_btn, "Automatically generate a unique IP address\n• Uses your current network settings\n• Assigns next available address in range")
         
         # Device ID
-        ttk.Label(device_frame, text="Device ID:").grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
+        id_label = ttk.Label(device_frame, text="Device ID:")
+        id_label.grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
         self.device_id_var = tk.StringVar(value="3001")
-        ttk.Entry(device_frame, textvariable=self.device_id_var, width=10).grid(row=1, column=1, sticky=(tk.W, tk.E))
+        id_entry = ttk.Entry(device_frame, textvariable=self.device_id_var, width=10)
+        id_entry.grid(row=2, column=1, sticky=(tk.W, tk.E))
+        ToolTip(id_label, "BACnet device instance ID\n• Must be unique on your BACnet network\n• This is how the device appears in BACnet browsers\n• Range: 1-4194303")
         
         # Device Name
-        ttk.Label(device_frame, text="Device Name:").grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
+        name_label = ttk.Label(device_frame, text="Device Name:")
+        name_label.grid(row=3, column=0, sticky=tk.W, padx=(0, 5))
         self.device_name_var = tk.StringVar(value="Virtual VAV Unit")
-        ttk.Entry(device_frame, textvariable=self.device_name_var).grid(row=2, column=1, sticky=(tk.W, tk.E))
+        name_entry = ttk.Entry(device_frame, textvariable=self.device_name_var)
+        name_entry.grid(row=3, column=1, sticky=(tk.W, tk.E))
+        ToolTip(name_label, "Device name visible in BACnet browsers\n• Keep it descriptive but concise\n• Shows up in YABE, VTS, and other BACnet tools")
         
         # Device Description
-        ttk.Label(device_frame, text="Description:").grid(row=3, column=0, sticky=tk.W, padx=(0, 5))
+        desc_label = ttk.Label(device_frame, text="Description:")
+        desc_label.grid(row=4, column=0, sticky=tk.W, padx=(0, 5))
         self.device_desc_var = tk.StringVar(value="Enhanced Virtual BACnet Device with CSV Point Loading")
-        ttk.Entry(device_frame, textvariable=self.device_desc_var).grid(row=3, column=1, sticky=(tk.W, tk.E))
+        desc_entry = ttk.Entry(device_frame, textvariable=self.device_desc_var)
+        desc_entry.grid(row=4, column=1, sticky=(tk.W, tk.E))
+        ToolTip(desc_label, "Device description shown in BACnet browsers\n• Provide detailed information about the device's purpose\n• Helps identify the device in network discovery")
         
         row += 1
         
@@ -113,14 +194,17 @@ class VirtualDeviceGUI:
         data_frame.columnconfigure(1, weight=1)
         
         # Points File
-        ttk.Label(data_frame, text="Points CSV File:").grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
+        points_label = ttk.Label(data_frame, text="Points CSV File:")
+        points_label.grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
         points_frame = ttk.Frame(data_frame)
         points_frame.grid(row=0, column=1, sticky=(tk.W, tk.E))
         points_frame.columnconfigure(0, weight=1)
         
         self.points_file_var = tk.StringVar(value="points.csv")
-        ttk.Entry(points_frame, textvariable=self.points_file_var).grid(row=0, column=0, sticky=(tk.W, tk.E))
+        points_entry = ttk.Entry(points_frame, textvariable=self.points_file_var)
+        points_entry.grid(row=0, column=0, sticky=(tk.W, tk.E))
         ttk.Button(points_frame, text="Browse", command=self.browse_points_file, width=8).grid(row=0, column=1, padx=(5, 0))
+        ToolTip(points_label, "CSV file containing BACnet object definitions\n• Should have columns: Type, Instance, Name, PresentValue, Override, Description\n• If file doesn't exist, simulator will create a minimal test device\n• Supports Analog, Binary, and Multistate objects")
         
         row += 1
         
@@ -130,24 +214,36 @@ class VirtualDeviceGUI:
         sim_frame.columnconfigure(1, weight=1)
         
         # Step Interval
-        ttk.Label(sim_frame, text="Step Interval (s):").grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
+        step_label = ttk.Label(sim_frame, text="Step Interval (s):")
+        step_label.grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
         self.step_interval_var = tk.StringVar(value="0.5")
-        ttk.Entry(sim_frame, textvariable=self.step_interval_var, width=10).grid(row=0, column=1, sticky=(tk.W, tk.E))
+        step_entry = ttk.Entry(sim_frame, textvariable=self.step_interval_var, width=10)
+        step_entry.grid(row=0, column=1, sticky=(tk.W, tk.E))
+        ToolTip(step_label, "Simulation update interval in seconds\n• Lower values = more responsive simulation, higher CPU usage\n• Range: 0.1-10.0\n• Recommended: 0.5-2.0 seconds")
         
         # AI Variation Range
-        ttk.Label(sim_frame, text="AI Variation Range:").grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
+        ai_label = ttk.Label(sim_frame, text="AI Variation Range:")
+        ai_label.grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
         self.ai_variation_var = tk.StringVar(value="0.15")
-        ttk.Entry(sim_frame, textvariable=self.ai_variation_var, width=10).grid(row=1, column=1, sticky=(tk.W, tk.E))
+        ai_entry = ttk.Entry(sim_frame, textvariable=self.ai_variation_var, width=10)
+        ai_entry.grid(row=1, column=1, sticky=(tk.W, tk.E))
+        ToolTip(ai_label, "Random variation for analog inputs (percentage)\n• Simulates sensor noise and real-world fluctuations\n• 0.15 = ±15% variation from base value\n• Range: 0.0-1.0")
         
         # AO Priority 16 Variation
-        ttk.Label(sim_frame, text="AO Priority 16 Variation:").grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
+        ao_label = ttk.Label(sim_frame, text="AO Priority 16 Variation:")
+        ao_label.grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
         self.ao_variation_var = tk.StringVar(value="0.25")
-        ttk.Entry(sim_frame, textvariable=self.ao_variation_var, width=10).grid(row=2, column=1, sticky=(tk.W, tk.E))
+        ao_entry = ttk.Entry(sim_frame, textvariable=self.ao_variation_var, width=10)
+        ao_entry.grid(row=2, column=1, sticky=(tk.W, tk.E))
+        ToolTip(ao_label, "Variation for analog outputs with priority 16 (percentage)\n• Simulates automatic control system adjustments\n• Only affects outputs that have been written to with priority 16\n• Range: 0.0-1.0")
         
         # Binary Flip Probability
-        ttk.Label(sim_frame, text="Binary Flip Probability:").grid(row=3, column=0, sticky=tk.W, padx=(0, 5))
+        binary_label = ttk.Label(sim_frame, text="Binary Flip Probability:")
+        binary_label.grid(row=3, column=0, sticky=tk.W, padx=(0, 5))
         self.binary_flip_var = tk.StringVar(value="0.01")
-        ttk.Entry(sim_frame, textvariable=self.binary_flip_var, width=10).grid(row=3, column=1, sticky=(tk.W, tk.E))
+        binary_entry = ttk.Entry(sim_frame, textvariable=self.binary_flip_var, width=10)
+        binary_entry.grid(row=3, column=1, sticky=(tk.W, tk.E))
+        ToolTip(binary_label, "Probability of binary inputs changing state per simulation step\n• Simulates alarm conditions, status changes, and sensor triggers\n• 0.01 = 1% chance per step (with 0.5s steps = ~1 change per 50 seconds)\n• Range: 0.0-1.0")
         
         row += 1
         
@@ -157,19 +253,34 @@ class VirtualDeviceGUI:
         env_frame.columnconfigure(1, weight=1)
         
         # Outdoor Temp Cycle
-        ttk.Label(env_frame, text="Outdoor Temp Cycle (min):").grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
+        cycle_label = ttk.Label(env_frame, text="Outdoor Temp Cycle (min):")
+        cycle_label.grid(row=0, column=0, sticky=tk.W, padx=(0, 5))
         self.temp_cycle_var = tk.StringVar(value="20")
-        ttk.Entry(env_frame, textvariable=self.temp_cycle_var, width=10).grid(row=0, column=1, sticky=(tk.W, tk.E))
+        cycle_entry = ttk.Entry(env_frame, textvariable=self.temp_cycle_var, width=10)
+        cycle_entry.grid(row=0, column=1, sticky=(tk.W, tk.E))
+        ToolTip(cycle_label, "Duration of outdoor temperature cycle in minutes\n• Creates realistic daily temperature patterns\n• 20 minutes = accelerated daily cycle for testing\n• 1440 minutes = real 24-hour cycle\n• Currently used for temperature sensors with 'Temperature' in their name")
         
         # Base Temperature
-        ttk.Label(env_frame, text="Base Temperature (°C):").grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
+        base_label = ttk.Label(env_frame, text="Base Temperature (°C):")
+        base_label.grid(row=1, column=0, sticky=tk.W, padx=(0, 5))
         self.base_temp_var = tk.StringVar(value="21.0")
-        ttk.Entry(env_frame, textvariable=self.base_temp_var, width=10).grid(row=1, column=1, sticky=(tk.W, tk.E))
+        base_entry = ttk.Entry(env_frame, textvariable=self.base_temp_var, width=10)
+        base_entry.grid(row=1, column=1, sticky=(tk.W, tk.E))
+        ToolTip(base_label, "Base outdoor temperature in degrees Celsius\n• Average temperature around which variations occur\n• Typical values: 15-25°C depending on season/location\n• Note: Currently hard-coded to 20°C in simulation")
         
         # Temperature Amplitude
-        ttk.Label(env_frame, text="Temperature Amplitude (°C):").grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
+        amp_label = ttk.Label(env_frame, text="Temperature Amplitude (°C):")
+        amp_label.grid(row=2, column=0, sticky=tk.W, padx=(0, 5))
         self.temp_amplitude_var = tk.StringVar(value="6.0")
-        ttk.Entry(env_frame, textvariable=self.temp_amplitude_var, width=10).grid(row=2, column=1, sticky=(tk.W, tk.E))
+        amp_entry = ttk.Entry(env_frame, textvariable=self.temp_amplitude_var, width=10)
+        amp_entry.grid(row=2, column=1, sticky=(tk.W, tk.E))
+        ToolTip(amp_label, "Temperature swing amplitude in degrees Celsius\n• How much temperature varies above/below base temperature\n• Creates morning cool / afternoon warm cycles\n• Typical values: 3-10°C\n• Note: Currently hard-coded to 5°C in simulation")
+        
+        # Info label about environmental settings
+        info_label = ttk.Label(env_frame, text="ℹ️ Environmental settings create realistic temperature cycles for sensors", 
+                              font=("Arial", 8), foreground="blue")
+        info_label.grid(row=3, column=0, columnspan=2, sticky=tk.W, pady=(5, 0))
+        ToolTip(info_label, "Environmental simulation creates:\n• Sine wave temperature cycles for outdoor sensors\n• Random walk for humidity sensors\n• Realistic variations for airflow sensors\n• Only affects objects with specific keywords in their names")
         
         row += 1
         
@@ -177,9 +288,17 @@ class VirtualDeviceGUI:
         config_controls = ttk.Frame(parent)
         config_controls.grid(row=row, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(10, 0))
         
-        ttk.Button(config_controls, text="Load Config", command=self.load_config_file).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(config_controls, text="Save Config", command=self.save_config_file).pack(side=tk.LEFT, padx=(0, 5))
-        ttk.Button(config_controls, text="Reset Defaults", command=self.reset_defaults).pack(side=tk.LEFT)
+        load_btn = ttk.Button(config_controls, text="Load Config", command=self.load_config_file)
+        load_btn.pack(side=tk.LEFT, padx=(0, 5))
+        ToolTip(load_btn, "Load configuration from an INI file\n• Restores all device and simulation settings\n• Useful for switching between different device configurations")
+        
+        save_btn = ttk.Button(config_controls, text="Save Config", command=self.save_config_file)
+        save_btn.pack(side=tk.LEFT, padx=(0, 5))
+        ToolTip(save_btn, "Save current configuration to an INI file\n• Preserves all settings for future use\n• Creates a reusable device configuration")
+        
+        reset_btn = ttk.Button(config_controls, text="Reset Defaults", command=self.reset_defaults)
+        reset_btn.pack(side=tk.LEFT)
+        ToolTip(reset_btn, "Reset all settings to default values\n• Restores factory default configuration\n• Useful for starting over with clean settings")
         
     def create_control_panel(self, parent):
         """Create control panel with start/stop and output"""
@@ -190,10 +309,12 @@ class VirtualDeviceGUI:
         self.start_button = ttk.Button(button_frame, text="🚀 Start Device", 
                                       command=self.start_device, style="Green.TButton")
         self.start_button.pack(side=tk.LEFT, padx=(0, 10))
+        ToolTip(self.start_button, "Start the virtual BACnet device\n• Creates BACnet objects from CSV file\n• Begins simulation with current settings\n• Device becomes discoverable on network")
         
         self.stop_button = ttk.Button(button_frame, text="⏹ Stop Device", 
                                      command=self.stop_device, state=tk.DISABLED, style="Red.TButton")
         self.stop_button.pack(side=tk.LEFT, padx=(0, 10))
+        ToolTip(self.stop_button, "Stop the virtual BACnet device\n• Terminates simulation\n• Releases network port\n• Device no longer discoverable")
         
         # Status indicator
         self.status_label = ttk.Label(button_frame, text="● Stopped", foreground="red")
@@ -217,12 +338,20 @@ class VirtualDeviceGUI:
         console_frame.columnconfigure(0, weight=1)
         console_frame.rowconfigure(0, weight=1)
         
-        self.console_text = scrolledtext.ScrolledText(console_frame, height=20, width=60)
+        # Make console read-only
+        self.console_text = scrolledtext.ScrolledText(console_frame, height=20, width=60, state=tk.DISABLED)
         self.console_text.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # Clear console button
-        ttk.Button(console_frame, text="Clear Console", 
-                  command=lambda: self.console_text.delete(1.0, tk.END)).grid(row=1, column=0, pady=(5, 0))
+        clear_btn = ttk.Button(console_frame, text="Clear Console", command=self.clear_console)
+        clear_btn.grid(row=1, column=0, pady=(5, 0))
+        ToolTip(clear_btn, "Clear all console output\n• Removes all logged messages\n• Useful for focusing on current session")
+        
+    def clear_console(self):
+        """Clear console output"""
+        self.console_text.config(state=tk.NORMAL)
+        self.console_text.delete(1.0, tk.END)
+        self.console_text.config(state=tk.DISABLED)
         
     def browse_points_file(self):
         """Browse for points CSV file"""
@@ -266,6 +395,7 @@ class VirtualDeviceGUI:
             # Device settings
             if config.has_section('device'):
                 self.port_var.set(config.get('device', 'port', fallback='47809'))
+                self.ip_var.set(config.get('device', 'ip', fallback=self.generate_device_ip()))
                 self.device_id_var.set(config.get('device', 'device_id', fallback='3001'))
                 self.device_name_var.set(config.get('device', 'device_name', fallback='Virtual VAV Unit'))
                 self.device_desc_var.set(config.get('device', 'device_description', 
@@ -299,6 +429,7 @@ class VirtualDeviceGUI:
         # Device section
         config.add_section('device')
         config.set('device', 'port', self.port_var.get())
+        config.set('device', 'ip', self.ip_var.get())
         config.set('device', 'device_id', self.device_id_var.get())
         config.set('device', 'device_name', self.device_name_var.get())
         config.set('device', 'device_description', self.device_desc_var.get())
@@ -330,6 +461,7 @@ class VirtualDeviceGUI:
     def reset_defaults(self):
         """Reset all settings to defaults"""
         self.port_var.set("47809")
+        self.ip_var.set(self.generate_device_ip())
         self.device_id_var.set("3001")
         self.device_name_var.set("Virtual VAV Unit")
         self.device_desc_var.set("Enhanced Virtual BACnet Device with CSV Point Loading")
@@ -399,7 +531,9 @@ class VirtualDeviceGUI:
             # Build command
             cmd = [
                 sys.executable, "virtual_device.py",
-                "--config", config_file
+                "--config", config_file,
+                "-a", self.ip_var.get(),
+                "--port", self.port_var.get()
             ]
             
             # Start process with unbuffered output
@@ -449,8 +583,10 @@ class VirtualDeviceGUI:
     
     def log_message(self, message):
         """Add message to console output"""
+        self.console_text.config(state=tk.NORMAL)
         self.console_text.insert(tk.END, f"{time.strftime('%H:%M:%S')} - {message}\n")
         self.console_text.see(tk.END)
+        self.console_text.config(state=tk.DISABLED)
     
     def monitor_output(self):
         """Monitor output queue for messages"""
