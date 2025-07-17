@@ -368,6 +368,9 @@ async def main():
     device_id = args.deviceId or config.getint('device', 'device_id', fallback=2001)
     step = config.getfloat('simulation', 'step_interval', fallback=0.5)
     
+    # Get simulation behavior settings
+    priority_aware = config.getboolean('simulation', 'priority_aware_simulation', fallback=True)
+    
     # Get CSV filename from config or command line
     if args.points:
         points_file = args.points
@@ -402,14 +405,62 @@ async def main():
     while True:
         now = time.time()
         
-        # Simple simulation for analog inputs - add some variation
+        # Simulation with proper BACnet priority handling
         for name, obj in objects.items():
             try:
-                if hasattr(obj, 'presentValue'):
-                    # Get current value
-                    current_val = obj.presentValue
+                if not hasattr(obj, 'presentValue'):
+                    continue
                     
-                    # Add some realistic variation based on object type
+                # Get current value
+                current_val = obj.presentValue
+                
+                # Determine object type from BAC0 object
+                obj_type = str(type(obj).__name__).lower()
+                
+                # Check if this is an input object (should always update)
+                is_input = ('input' in obj_type or 
+                           obj_type in ['analoginput', 'binaryinput', 'multistateinput'])
+                
+                # Check if this is an output/value object (commandable - check priority)
+                is_commandable = ('output' in obj_type or 'value' in obj_type or
+                                obj_type in ['analogoutput', 'binaryoutput', 'multistateoutput',
+                                           'analogvalue', 'binaryvalue', 'multistatevalue'])
+                
+                # For inputs, always update based on simulation
+                if is_input:
+                    should_update = True
+                    
+                # For commandable objects, behavior depends on priority_aware setting
+                elif is_commandable:
+                    if priority_aware:
+                        # Only update if priority 16 is active (proper BACnet behavior)
+                        should_update = False
+                        try:
+                            # Check if object has priority array and if priority 16 is active
+                            if hasattr(obj, 'priorityArray'):
+                                priority_array = obj.priorityArray
+                                # If all higher priorities (1-15) are null, then priority 16 is active
+                                higher_priorities_active = any(
+                                    priority_array[i] is not None 
+                                    for i in range(15)  # priorities 1-15 (0-indexed)
+                                )
+                                should_update = not higher_priorities_active
+                            else:
+                                # If no priority array, assume we can update (fallback behavior)
+                                should_update = True
+                        except Exception:
+                            # If priority checking fails, err on the side of not updating outputs
+                            should_update = False
+                    else:
+                        # Legacy behavior - update all commandable objects
+                        should_update = True
+                else:
+                    # Unknown object type, skip
+                    should_update = False
+                
+                # Apply simulation updates only if appropriate
+                if should_update:
+                    # Add realistic variation based on object name/type
                     if 'Temperature' in name:
                         # Temperature sine wave with small random variation
                         base_temp = 20 + 5 * math.sin(2 * math.pi * now / OUTDOOR_CYCLE_S)
@@ -429,7 +480,25 @@ async def main():
                         # Pressure variation
                         obj.presentValue = max(0, current_val + random.uniform(-0.1, 0.1))
                         
+                    elif 'multistate' in obj_type.lower():
+                        # For multistate objects, occasionally change state
+                        if random.random() < 0.001:  # 0.1% chance per step
+                            try:
+                                num_states = obj.numberOfStates if hasattr(obj, 'numberOfStates') else 4
+                                new_state = random.randint(1, num_states)
+                                obj.presentValue = new_state
+                            except Exception:
+                                pass
+                        
+                    elif 'binary' in obj_type.lower():
+                        # For binary objects, occasionally flip state
+                        if random.random() < 0.0005:  # 0.05% chance per step
+                            obj.presentValue = 'active' if obj.presentValue == 'inactive' else 'inactive'
+                        
             except Exception as e:
+                # Log which object failed for debugging
+                if hasattr(obj, 'objectName'):
+                    safe_print(f"⚠️ Simulation error for {obj.objectName}: {e}")
                 pass  # Skip objects that can't be updated
         
         await asyncio.sleep(STEP)
