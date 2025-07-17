@@ -1,25 +1,27 @@
-# ─────────── virtual_vav_device.py ─────────────────────────────────────────
+#!/usr/bin/env python3
 """
-Virtual BACnet/IP VAV device built from a CSV definition.
+Enhanced Virtual VAV BACnet Device Simulator
+============================================
 
-Usage example
--------------
-python virtual_vav_device.py -f vav-4_20250716.csv \
-                             -a 192.168.88.10/24 -p 47808 -d 2001 \
-                             -c vav.ini
+Features:
+• Loads point definitions from CSV file
+• Uses INI configuration file for all settings
+• Realistic simulation similar to original vav_emulator.py
+
+Usage:
+    python virtual_vav_device.py [--config vav.ini] [--points points.csv]
 """
+
 import argparse
 import asyncio
 import configparser
-import itertools
+import csv
 import math
 import random
-import re
+import socket
 import time
 from pathlib import Path
-from typing import Dict, List
 
-import pandas as pd
 import BAC0
 from BAC0.core.devices.local.factory import (
     analog_input, analog_output, analog_value,
@@ -27,166 +29,292 @@ from BAC0.core.devices.local.factory import (
     multistate_input, multistate_output, multistate_value
 )
 
-# ────────────── internal helpers & constants ──────────────────────────────
-_OBJ_MAP = {
-    'analog input':  analog_input,
-    'analog output': analog_output,
-    'analog value':  analog_value,
-    'binary input':  binary_input,
-    'binary output': binary_output,
-    'binary value':  binary_value,
-    'multi state input':  multistate_input,
-    'multi state output': multistate_output,
-    'multi state value':  multistate_value,
-}
+# ──────────────── CLI ────────────────────────────────────────────────────────
+p = argparse.ArgumentParser(
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    description="Virtual BACnet/IP VAV loading points from CSV",
+)
+p.add_argument("-a", "--address", help="e.g. 192.168.88.10/24 (overrides config)")
+p.add_argument("--port", type=int, help="UDP port (overrides config)")
+p.add_argument("-d", "--deviceId", type=int, help="Device-instance (overrides config)")
+p.add_argument("-c", "--config", default="vav.ini", help="Configuration file")
+p.add_argument("-p", "--points", default="points.csv", help="Points CSV file")
+args = p.parse_args()
 
-_CORE_TYPES = list(_OBJ_MAP.keys())
-_NUMERIC     = re.compile(r'^\s*([-+]?\d*\.?\d+)', re.I)
-_PRIORITY_16 = re.compile(r'level\s*16', re.I)
+# ──────────────── Point-helper functions (same as original) ──────────────────
+def add_ai(app, inst, name, units, val=0, desc=""):
+    analog_input(instance=inst, name=name,
+                 properties={"units": units},
+                 description=desc or name,
+                 presentValue=val
+                 ).add_objects_to_application(app)
+    return app[name]
 
-def _parse_val(text: str) -> float | int:
-    """Extract numeric or state index from the PresentValue column."""
-    if pd.isna(text):
-        return 0
-    m = _NUMERIC.match(str(text))
-    if m:
-        return float(m.group(1))
-    m = re.match(r'\[\s*(\d+)\s*\]', str(text))
-    return int(m.group(1)) if m else 0
+def add_ao(app, inst, name, units, val=0, desc=""):
+    analog_output(instance=inst, name=name,
+                  properties={"units": units},
+                  description=desc or name,
+                  presentValue=val,
+                  relinquish_default=val            # commandable
+                  ).add_objects_to_application(app)
+    return app[name]
 
-def _add_placeholder(app, obj_type: str, inst: int):
-    """Guarantee every core object type is represented."""
-    fn  = _OBJ_MAP[obj_type]
-    fn(instance=inst, name=f'Placeholder {obj_type}',
-       description='Does not exist on physical VAV – added for testing.',
-       presentValue=0,
-       relinquish_default=0 if 'output' in obj_type or 'value' in obj_type else None
-    ).add_objects_to_application(app)
+def add_av(app, inst, name, units, val=0, desc=""):
+    analog_value(instance=inst, name=name,
+                 properties={"units": units},
+                 description=desc or name,
+                 presentValue=val,
+                 relinquish_default=val            # commandable
+                 ).add_objects_to_application(app)
+    return app[name]
 
-# ────────────── CSV → BACnet objects ──────────────────────────────────────
-def build_objects(app, df: pd.DataFrame):
-    """Create objects; return buckets grouped by behaviour."""
-    buckets: Dict[str, List] = {k: [] for k in (
-        'ai','ao','av','bi','bo','bv','msi','mso','msv')}
-    highest_inst = max(df['Instance'].astype(int).tolist() + [0])
+def add_bi(app, inst, name, val=False, desc=""):
+    binary_input(instance=inst, name=name,
+                 description=desc or name,
+                 presentValue=val
+                 ).add_objects_to_application(app)
+    return app[name]
 
-    for _, row in df.iterrows():
-        t_raw = str(row['Type']).strip().lower()
-        if t_raw not in _OBJ_MAP:
-            print(f'⚠ Unknown type: {row["Type"]} – skipped')
-            continue
-        fn   = _OBJ_MAP[t_raw]
-        inst = int(row['Instance'])
-        name = str(row['Name']).strip()
-        desc = str(row.get('Description', '') or name)
-        val  = _parse_val(row.get('PresentValue', 0))
+def add_bo(app, inst, name, val=False, desc=""):
+    binary_output(instance=inst, name=name,
+                  description=desc or name,
+                  presentValue=val,
+                  relinquish_default=val            # ✨ makes BO commandable
+                  ).add_objects_to_application(app)
+    return app[name]
 
-        kwargs = dict(instance=inst, name=name,
-                      description=desc, presentValue=val)
-        if 'output' in t_raw or 'value' in t_raw:
-            kwargs['relinquish_default'] = val  # make commandable
+def add_bv(app, inst, name, val=False, desc=""):
+    binary_value(instance=inst, name=name,
+                 description=desc or name,
+                 presentValue=val,
+                 relinquish_default=val            # commandable
+                 ).add_objects_to_application(app)
+    return app[name]
 
-        obj = fn(**kwargs)
-        obj.add_objects_to_application(app)
+def add_mi(app, inst, name, states, val=1, desc=""):
+    multistate_input(instance=inst, name=name,
+                     numberOfStates=len(states),
+                     description=desc or name,
+                     stateText=states,
+                     presentValue=val
+                     ).add_objects_to_application(app)
+    return app[name]
 
-        key = (t_raw
-               .replace(' ', '')   # e.g. "multi state input"
-               .replace('analog', 'a')
-               .replace('binary', 'b')
-               .replace('input', 'i')
-               .replace('output', 'o')
-               .replace('value', 'v'))
-        buckets[key].append((obj, row.get('Override', '')))
+def add_mo(app, inst, name, states, val=1, desc=""):
+    multistate_output(instance=inst, name=name,
+                      numberOfStates=len(states),
+                      description=desc or name,
+                      stateText=states,
+                      presentValue=val,
+                      relinquish_default=val         # commandable
+                      ).add_objects_to_application(app)
+    return app[name]
 
-    # inject placeholders
-    for kind in _CORE_TYPES:
-        if kind not in df['Type'].str.lower().unique():
-            highest_inst += 1
-            _add_placeholder(app, kind, highest_inst)
+def add_mv(app, inst, name, states, val=1, desc=""):
+    multistate_value(instance=inst, name=name,
+                     numberOfStates=len(states),
+                     description=desc or name,
+                     stateText=states,
+                     presentValue=val,
+                     relinquish_default=val          # commandable MV
+                     ).add_objects_to_application(app)
+    return app[name]
 
-    return buckets
+# ──────────────── Auto IP Detection Function ────────────────────────────────
+def get_local_ip():
+    """Automatically detect the local IP address"""
+    try:
+        # Connect to a remote address to determine which local interface to use
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+            s.connect(("8.8.8.8", 80))
+            local_ip = s.getsockname()[0]
+        return f"{local_ip}/24"
+    except Exception:
+        # Fallback to localhost if auto-detection fails
+        return "127.0.0.1/32"
 
-# ────────────── simulation loop ───────────────────────────────────────────
-async def simulate(b, step: float, cfg: Dict[str, float]):
-    ai_var, ao_var = cfg['ai_var'], cfg['ao_var']
-    flip_p, msi_per = cfg['flip_p'], cfg['msi_per']
-    msi_clock = 0.0
+# ──────────────── CSV Loading Function ───────────────────────────────────────
+def load_points_from_csv(csv_file: str):
+    """Load point definitions from CSV file"""
+    points = []
+    
+    if not Path(csv_file).exists():
+        print(f"⚠ CSV file {csv_file} not found")
+        return points
+    
+    try:
+        with open(csv_file, 'r', newline='', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                points.append(row)
+        
+        print(f"✔ Loaded {len(points)} points from {csv_file}")
+        return points
+        
+    except Exception as e:
+        print(f"✗ Error loading CSV: {e}")
+        return points
 
-    while True:
-        # Analog & binary inputs
-        for (obj, _) in b['ai']:
-            obj.presentValue += random.uniform(-ai_var, ai_var)
-        for (obj, _) in b['bi']:
-            if random.random() < flip_p:
-                obj.presentValue = int(not obj.presentValue)
+# ──────────────── Object Creation from CSV ──────────────────────────────────
+def create_objects_from_csv(app, points):
+    """Create BACnet objects from CSV point definitions"""
+    created_objects = {}
+    
+    for point in points:
+        try:
+            object_type = point['Type']
+            instance = int(point['Instance'])
+            name = point['Name']
+            units = 'noUnits'  # Not in CSV, default value
+            description = point.get('Description', name)
+            
+            # Get initial value with safe conversion
+            try:
+                val_str = point.get('PresentValue', '0').replace(' %', '').replace(' CFM', '').replace(' F', '').replace(' GPM', '').replace(' PSI', '').split()[0]
+                initial_val = float(val_str)
+            except (ValueError, TypeError, IndexError):
+                initial_val = 0.0
+            
+            # Map CSV object types to BAC0 types
+            object_type_map = {
+                'Analog Input': 'analogInput',
+                'Analog Output': 'analogOutput', 
+                'Analog Value': 'analogValue',
+                'Binary Input': 'binaryInput',
+                'Binary Output': 'binaryOutput',
+                'Binary Value': 'binaryValue',
+                'Multistate Input': 'multistateInput',
+                'Multistate Output': 'multistateOutput',
+                'Multistate Value': 'multistateValue',
+                # Handle lowercase versions from CSV
+                'multistateinput': 'multistateInput',
+                'multistateoutput': 'multistateOutput',
+                'multistatevalue': 'multistateValue'
+            }
+            
+            bac_object_type = object_type_map.get(object_type, object_type.lower().replace(' ', ''))
+            print(f"Creating {bac_object_type} {instance}: {name}")
+            
+            # Create object based on type using the same helper functions
+            if bac_object_type == 'analogInput':
+                obj = add_ai(app, instance, name, units, initial_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type == 'analogOutput':
+                obj = add_ao(app, instance, name, units, initial_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type == 'analogValue':
+                obj = add_av(app, instance, name, units, initial_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type == 'binaryInput':
+                bool_val = bool(initial_val)
+                obj = add_bi(app, instance, name, bool_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type == 'binaryOutput':
+                bool_val = bool(initial_val)
+                obj = add_bo(app, instance, name, bool_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type == 'binaryValue':
+                bool_val = bool(initial_val)
+                obj = add_bv(app, instance, name, bool_val, description)
+                created_objects[name] = obj
+                
+            elif bac_object_type in ['multistateInput', 'multistateOutput', 'multistateValue']:
+                # Default states if not specified
+                states = ["State1", "State2", "State3", "State4"]
+                int_val = max(1, int(initial_val))
+                
+                if bac_object_type == 'multistateInput':
+                    obj = add_mi(app, instance, name, states, int_val, description)
+                elif bac_object_type == 'multistateOutput':
+                    obj = add_mo(app, instance, name, states, int_val, description)
+                else:  # multistateValue
+                    obj = add_mv(app, instance, name, states, int_val, description)
+                    
+                created_objects[name] = obj
+            
+            else:
+                print(f"⚠ Unknown object type: {bac_object_type}")
+                
+        except Exception as e:
+            print(f"✗ Failed to create {point.get('ObjectName', 'unknown')}: {e}")
+    
+    print(f"✔ Successfully created {len(created_objects)} BACnet objects")
+    return created_objects
 
-        # Multistate inputs (periodic cycle)
-        msi_clock += step
-        if msi_clock >= msi_per:
-            for (obj, _) in b['msi']:
-                obj.presentValue = (int(obj.presentValue or 1) % 5) + 1
-            msi_clock = 0.0
-
-        # Drift *outputs* only when Level‑16 is the active writer
-        def drift_ok(override: str) -> bool:
-            return bool(_PRIORITY_16.search(str(override)))
-
-        for (obj, ov) in b['ao'] + b['av']:
-            if drift_ok(ov):
-                obj.presentValue += random.uniform(-ao_var, ao_var)
-        for (obj, ov) in b['bo'] + b['bv']:
-            if drift_ok(ov) and random.random() < flip_p:
-                obj.presentValue = int(not obj.presentValue)
-        for (obj, ov) in b['mso'] + b['msv']:
-            if drift_ok(ov):
-                obj.presentValue = (int(obj.presentValue or 1) % 5) + 1
-
-        await asyncio.sleep(step)
-
-# ────────────── configuration helpers ─────────────────────────────────────
-def load_ini(path: Path):
-    c = configparser.ConfigParser()
-    c.read_dict({
-        'device': {'step':'0.5'},
-        'simulation': {
-            'ai_var':'0.2', 'ao_var':'0.3',
-            'flip_p':'0.005', 'msi_per':'30'
-        }
-    })
-    if path and path.exists():
-        c.read(path)
-    return c
-
-# ────────────── main entry point ──────────────────────────────────────────
+# ──────────────── Main async task ────────────────────────────────────────────
 async def main():
-    p = argparse.ArgumentParser(description='Virtual VAV from CSV')
-    p.add_argument('-f', '--file',  type=Path, required=True, help='CSV file')
-    p.add_argument('-c', '--config',type=Path, help='INI with overrides')
-    p.add_argument('-a', '--address',help='192.168.88.10/24')
-    p.add_argument('-p', '--port',   type=int, help='UDP port')
-    p.add_argument('-d', '--deviceId',type=int, help='Device instance')
-    p.add_argument('-s', '--step',   type=float, help='Simulation step (s)')
-    args = p.parse_args()
+    # Load configuration
+    config = configparser.ConfigParser()
+    config.read(args.config)
+    
+    # Get network settings (command line overrides config file, auto-detect if not specified)
+    if args.address:
+        address = args.address
+    elif config.has_option('device', 'address'):
+        address = config.get('device', 'address')
+    else:
+        address = get_local_ip()
+        print(f"🔍 Auto-detected IP address: {address}")
+    
+    port = args.port or config.getint('device', 'port', fallback=47809)
+    device_id = args.deviceId or config.getint('device', 'device_id', fallback=2001)
+    step = config.getfloat('simulation', 'step_interval', fallback=0.5)
+    
+    # Create BACnet application
+    app = BAC0.lite(ip=address, port=port, deviceId=device_id)
+    
+    # Load and create objects from CSV
+    points = load_points_from_csv(args.points)
+    objects = create_objects_from_csv(app, points)
+    
+    print(f"✔ Virtual VAV device {device_id} on {address.split('/')[0]}:{port}")
+    print(f"✔ Running with {len(objects)} objects from CSV")
+    
+    # ────────────── Simulation constants ─────────────────────────────────────
+    STEP = step
+    OUTDOOR_CYCLE_S = 20 * 60          # 20-min "day"
+    
+    # ────────────── Main simulation loop ─────────────────────────────────────
+    while True:
+        now = time.time()
+        
+        # Simple simulation for analog inputs - add some variation
+        for name, obj in objects.items():
+            try:
+                if hasattr(obj, 'presentValue'):
+                    # Get current value
+                    current_val = obj.presentValue
+                    
+                    # Add some realistic variation based on object type
+                    if 'Temperature' in name:
+                        # Temperature sine wave with small random variation
+                        base_temp = 20 + 5 * math.sin(2 * math.pi * now / OUTDOOR_CYCLE_S)
+                        obj.presentValue = base_temp + random.uniform(-1, 1)
+                        
+                    elif 'Humidity' in name:
+                        # Humidity random walk
+                        new_val = max(20, min(80, current_val + random.uniform(-0.5, 0.5)))
+                        obj.presentValue = new_val
+                        
+                    elif 'Airflow' in name:
+                        # Airflow with some variation
+                        base_flow = 100 + 50 * math.sin(2 * math.pi * now / (OUTDOOR_CYCLE_S * 2))
+                        obj.presentValue = max(0, base_flow + random.uniform(-10, 10))
+                        
+                    elif 'Pressure' in name:
+                        # Pressure variation
+                        obj.presentValue = max(0, current_val + random.uniform(-0.1, 0.1))
+                        
+            except Exception as e:
+                pass  # Skip objects that can't be updated
+        
+        await asyncio.sleep(STEP)
 
-    ini = load_ini(args.config or Path())
-    addr = args.address  or ini['device'].get('address', '192.168.88.10/24')
-    port = args.port     or ini.getint('device','port', 47808)
-    devid= args.deviceId or ini.getint('device','device_id', 2001)
-    step = args.step     or ini.getfloat('device','step', 0.5)
-
-    sim_cfg = {
-        'ai_var' : ini.getfloat('simulation', 'ai_variation', 0.2),
-        'ao_var' : ini.getfloat('simulation', 'ao_variation', 0.3),
-        'flip_p' : ini.getfloat('simulation', 'binary_flip_p', 0.005),
-        'msi_per': ini.getfloat('simulation', 'msi_period', 30)
-    }
-
-    app = BAC0.lite(ip=addr, port=port, deviceId=devid)
-    buckets = build_objects(app, pd.read_csv(args.file, encoding='utf-8'))
-
-    print(f'✓ Device {devid} online @ {addr.split("/")[0]}:{port} — '
-          f'{sum(len(v) for v in buckets.values())} objects')
-    await simulate(buckets, step, sim_cfg)
-
-if __name__ == '__main__':
+# ─────────────────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
     asyncio.run(main())
