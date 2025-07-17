@@ -1,0 +1,43 @@
+Type,Instance,Name,PresentValue,Override,Description
+Analog Input,43,Air Valve Position Command,100 %,,
+Analog Input,44,Air Valve Size,1100 CFM,,
+Analog Input,45,Discharge Air Flow,635.8 CFM,,
+Analog Input,46,Heating Capacity Secondary Status,0 %,,
+Analog Input,47,Reheat Type,2,,
+Analog Input,48,Secondary Communication Address,105,,
+Analog Input,49,Secondary Communication Link,2,,
+Analog Input,50,Space Temperature Active,72.9 °F,,
+Analog Input,51,Space Temperature Setpoint Active,75.5 °F,,
+Analog Input,52,Supply Fan Type,22,,
+Analog Input,53,Ventilation Ratio,17 %,,
+Analog Input,54,Ventilation Setpoint Active,110 CFM,,
+Analog Input,440,Supply Fan Speed Status,0 %,,
+Analog Output,25,Minimum Flow Setpoint Multiplier BAS,1,—,
+Analog Output,26,Source Temperature BAS,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,27,Occupied Offset,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,28,Space Temperature Setpoint BAS,72.504 °F,—,
+Analog Output,29,Occupied Standby Offset,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,30,Unoccupied Cooling Setpoint,84.995995 °F,—,
+Analog Output,31,Unoccupied Heating Setpoint,60.01199 °F,—,
+Analog Output,32,Ventilation Setpoint BAS,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Binary Input,27,Air Valve Control Action Active,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,28,Air Valve Position Control,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,29,Timed Override Timer Is Active,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,30,Diagnostic Present,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,31,Diagnostic Present: Advisory,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,32,Diagnostic Present: Critical,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,33,Diagnostic Present: Information,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,34,Diagnostic Present: Service Required,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Output,10,Air Valve Control Action BAS,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,11,Heat Lockout Command,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,89,Supply Fan Lockout Command,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Multi State Input,18,Communication Status,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,19,Heat Cool Mode Status,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,20,Occupancy Status,[4] Occupied Standby,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,21,Secondary Communication Status,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,22,Timed Override Status,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Output,13,Air Flow Override,[1] Air Valves Auto Control,—,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,14,Heat Cool Mode Request,[1] Auto,—,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,15,Occupancy Request,[4] Occupied Standby,[4] Occupied Standby at Level 9: Unspecified,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,16,Water Valve Override,[1] Off,—,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Input,4194306,Operation Status,[4] Cooling,,"Extension for VAV operation status: [1]=Off, [2]=Fan, [3]=Heating, [4]=Cooling"
