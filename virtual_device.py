@@ -45,6 +45,17 @@ import BAC0
 # Silence BAC0 immediately after import
 BAC0.log_level('silence')
 
+# Helper function for safe emoji printing
+def safe_print(message):
+    """Print message with emoji fallback for encoding issues"""
+    try:
+        print(message)
+    except UnicodeEncodeError:
+        # Remove emoji characters for ASCII-only consoles
+        import re
+        ascii_message = re.sub(r'[^\x00-\x7F]+', '', message)
+        print(ascii_message.strip())
+
 from BAC0.core.devices.local.factory import (
     analog_input, analog_output, analog_value,
     binary_input, binary_output, binary_value,
@@ -161,7 +172,7 @@ def load_points_from_csv(csv_file: str):
     points = []
     
     if not Path(csv_file).exists():
-        print(f"⚠ CSV file {csv_file} not found - creating minimal test device")
+        safe_print(f"⚠ CSV file {csv_file} not found - creating minimal test device")
         return points
     
     try:
@@ -170,11 +181,11 @@ def load_points_from_csv(csv_file: str):
             for row in reader:
                 points.append(row)
         
-        print(f"✔ Loaded {len(points)} points from {csv_file}")
+        safe_print(f"✔ Loaded {len(points)} points from {csv_file}")
         return points
         
     except Exception as e:
-        print(f"✗ Error loading CSV: {e}")
+        safe_print(f"✗ Error loading CSV: {e}")
         return points
 
 # ──────────────── Object Creation from CSV ──────────────────────────────────
@@ -187,7 +198,7 @@ def create_objects_from_csv(app, points):
     if total_points == 0:
         return created_objects
     
-    print(f"🔧 Creating {total_points} BACnet objects...", end="", flush=True)
+    safe_print(f"🔧 Creating {total_points} BACnet objects...")
     
     # Object type mapping
     object_type_map = {
@@ -211,9 +222,18 @@ def create_objects_from_csv(app, points):
             # Show progress every 10 objects
             if i % 10 == 0 or i == total_points - 1:
                 progress = int((i + 1) / total_points * 20)  # 20 character progress bar
-                bar = "█" * progress + "░" * (20 - progress)
+                bar = "=" * progress + "-" * (20 - progress)  # Use ASCII chars for compatibility
                 percent = int((i + 1) / total_points * 100)
-                print(f"\r🔧 Creating objects... [{bar}] {percent}% ({i+1}/{total_points})", end="", flush=True)
+                # For subprocess compatibility, use newlines instead of carriage returns
+                if sys.stdout.isatty():
+                    # Terminal output - use carriage return
+                    try:
+                        print(f"\r🔧 Creating objects... [{bar}] {percent}% ({i+1}/{total_points})", end="", flush=True)
+                    except UnicodeEncodeError:
+                        print(f"\rCreating objects... [{bar}] {percent}% ({i+1}/{total_points})", end="", flush=True)
+                else:
+                    # Subprocess output - use newlines for proper buffering
+                    safe_print(f"Creating objects... [{bar}] {percent}% ({i+1}/{total_points})")
             
             object_type = point['Type']
             instance = int(point['Instance'])
@@ -288,9 +308,9 @@ def create_objects_from_csv(app, points):
     print()  # New line after progress bar
     
     if failed_count > 0:
-        print(f"✔ Successfully created {len(created_objects)} BACnet objects ({failed_count} failed)")
+        safe_print(f"✔ Successfully created {len(created_objects)} BACnet objects ({failed_count} failed)")
     else:
-        print(f"✔ Successfully created {len(created_objects)} BACnet objects")
+        safe_print(f"✔ Successfully created {len(created_objects)} BACnet objects")
     
     return created_objects
 
@@ -307,7 +327,7 @@ async def main():
         address = config.get('device', 'address')
     else:
         address = get_local_ip()
-        print(f"🔍 Auto-detected IP address: {address}")
+        safe_print(f"🔍 Auto-detected IP address: {address}")
     
     port = args.port or config.getint('device', 'port', fallback=47809)
     device_id = args.deviceId or config.getint('device', 'device_id', fallback=2001)
@@ -334,10 +354,10 @@ async def main():
         with redirect_stderr(StringIO()):
             objects = create_objects_from_csv(app, points)
     
-    print(f"✔ Virtual BACnet device {device_id} on {address.split('/')[0]}:{port}")
-    print(f"✔ Running with {len(objects)} objects from {points_file}")
-    print(f"🚀 Device is READY and monitoring - discoverable in YABE/VTS")
-    print(f"📡 Broadcasting on network {address} - Port: {port} - Device ID: {device_id}")
+    safe_print(f"✔ Virtual BACnet device {device_id} on {address.split('/')[0]}:{port}")
+    safe_print(f"✔ Running with {len(objects)} objects from {points_file}")
+    safe_print(f"🚀 Device is READY and monitoring - discoverable in YABE/VTS")
+    safe_print(f"📡 Broadcasting on network {address} - Port: {port} - Device ID: {device_id}")
     
     # ────────────── Simulation constants ─────────────────────────────────────
     STEP = step
