@@ -337,7 +337,7 @@ async def main():
     print(f"✔ Virtual BACnet device {device_id} on {address.split('/')[0]}:{port}")
     print(f"✔ Running with {len(objects)} objects from {points_file}")
     print(f"🚀 Device is READY and monitoring - discoverable in YABE/VTS")
-    print(f"📡 Broadcasting on network {address} - Device ID: {device_id}")
+    print(f"📡 Broadcasting on network {address} - Port: {port} - Device ID: {device_id}")
     
     # ────────────── Simulation constants ─────────────────────────────────────
     STEP = step
