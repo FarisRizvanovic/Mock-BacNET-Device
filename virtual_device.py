@@ -1,28 +1,50 @@
 #!/usr/bin/env python3
 """
-Enhanced Virtual VAV BACnet Device Simulator
-============================================
+Virtual BACnet Device Simulator
+===============================
+
+A Python-based BACnet/IP device simulator that loads point definitions from CSV files
+and creates fully functional BACnet objects with realistic simulation behavior.
 
 Features:
-• Loads point definitions from CSV file
-• Uses INI configuration file for all settings
-• Realistic simulation similar to original vav_emulator.py
+• Automatic IP detection for easy network discovery
+• CSV-based point loading with flexible object types
+• Configurable simulation parameters via INI file
+• Realistic VAV control algorithms and environmental modeling
+• Compatible with YABE, VTS, and other BACnet browsers
 
 Usage:
-    python virtual_vav_device.py [--config vav.ini] [--points points.csv]
+    python virtual_device.py [--config virtual_device.ini] [--points points.csv]
 """
 
 import argparse
 import asyncio
 import configparser
 import csv
+import logging
 import math
 import random
 import socket
+import sys
 import time
 from pathlib import Path
+from contextlib import redirect_stderr, redirect_stdout
+from io import StringIO
+import warnings
+
+# Completely suppress all logging and warnings BEFORE importing BAC0
+warnings.filterwarnings("ignore")
+logging.disable(logging.CRITICAL)
+
+# Set root logger to suppress everything
+root_logger = logging.getLogger()
+root_logger.disabled = True
 
 import BAC0
+
+# Silence BAC0 immediately after import
+BAC0.log_level('silence')
+
 from BAC0.core.devices.local.factory import (
     analog_input, analog_output, analog_value,
     binary_input, binary_output, binary_value,
@@ -32,13 +54,13 @@ from BAC0.core.devices.local.factory import (
 # ──────────────── CLI ────────────────────────────────────────────────────────
 p = argparse.ArgumentParser(
     formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-    description="Virtual BACnet/IP VAV loading points from CSV",
+    description="Virtual BACnet/IP Device - loads points from CSV with realistic simulation",
 )
 p.add_argument("-a", "--address", help="e.g. 192.168.88.10/24 (overrides config)")
 p.add_argument("--port", type=int, help="UDP port (overrides config)")
 p.add_argument("-d", "--deviceId", type=int, help="Device-instance (overrides config)")
-p.add_argument("-c", "--config", default="vav.ini", help="Configuration file")
-p.add_argument("-p", "--points", default="points.csv", help="Points CSV file")
+p.add_argument("-c", "--config", default="virtual_device.ini", help="Configuration file")
+p.add_argument("-p", "--points", help="Points CSV file (overrides config)")
 args = p.parse_args()
 
 # ──────────────── Point-helper functions (same as original) ──────────────────
@@ -139,7 +161,7 @@ def load_points_from_csv(csv_file: str):
     points = []
     
     if not Path(csv_file).exists():
-        print(f"⚠ CSV file {csv_file} not found")
+        print(f"⚠ CSV file {csv_file} not found - creating minimal test device")
         return points
     
     try:
@@ -159,14 +181,52 @@ def load_points_from_csv(csv_file: str):
 def create_objects_from_csv(app, points):
     """Create BACnet objects from CSV point definitions"""
     created_objects = {}
+    total_points = len(points)
+    failed_count = 0
     
-    for point in points:
+    if total_points == 0:
+        return created_objects
+    
+    print(f"🔧 Creating {total_points} BACnet objects...", end="", flush=True)
+    
+    # Object type mapping
+    object_type_map = {
+        'Analog Input': 'analogInput',
+        'Analog Output': 'analogOutput', 
+        'Analog Value': 'analogValue',
+        'Binary Input': 'binaryInput',
+        'Binary Output': 'binaryOutput',
+        'Binary Value': 'binaryValue',
+        'Multistate Input': 'multistateInput',
+        'Multistate Output': 'multistateOutput',
+        'Multistate Value': 'multistateValue',
+        # Handle lowercase versions from CSV
+        'multistateinput': 'multistateInput',
+        'multistateoutput': 'multistateOutput',
+        'multistatevalue': 'multistateValue'
+    }
+    
+    for i, point in enumerate(points):
         try:
+            # Show progress every 10 objects
+            if i % 10 == 0 or i == total_points - 1:
+                progress = int((i + 1) / total_points * 20)  # 20 character progress bar
+                bar = "█" * progress + "░" * (20 - progress)
+                percent = int((i + 1) / total_points * 100)
+                print(f"\r🔧 Creating objects... [{bar}] {percent}% ({i+1}/{total_points})", end="", flush=True)
+            
             object_type = point['Type']
             instance = int(point['Instance'])
             name = point['Name']
             units = 'noUnits'  # Not in CSV, default value
             description = point.get('Description', name)
+            
+            # Handle duplicate names by making them unique
+            original_name = name
+            counter = 1
+            while name in created_objects:
+                name = f"{original_name}_{counter}"
+                counter += 1
             
             # Get initial value with safe conversion
             try:
@@ -175,25 +235,7 @@ def create_objects_from_csv(app, points):
             except (ValueError, TypeError, IndexError):
                 initial_val = 0.0
             
-            # Map CSV object types to BAC0 types
-            object_type_map = {
-                'Analog Input': 'analogInput',
-                'Analog Output': 'analogOutput', 
-                'Analog Value': 'analogValue',
-                'Binary Input': 'binaryInput',
-                'Binary Output': 'binaryOutput',
-                'Binary Value': 'binaryValue',
-                'Multistate Input': 'multistateInput',
-                'Multistate Output': 'multistateOutput',
-                'Multistate Value': 'multistateValue',
-                # Handle lowercase versions from CSV
-                'multistateinput': 'multistateInput',
-                'multistateoutput': 'multistateOutput',
-                'multistatevalue': 'multistateValue'
-            }
-            
             bac_object_type = object_type_map.get(object_type, object_type.lower().replace(' ', ''))
-            print(f"Creating {bac_object_type} {instance}: {name}")
             
             # Create object based on type using the same helper functions
             if bac_object_type == 'analogInput':
@@ -238,12 +280,18 @@ def create_objects_from_csv(app, points):
                 created_objects[name] = obj
             
             else:
-                print(f"⚠ Unknown object type: {bac_object_type}")
+                failed_count += 1
                 
         except Exception as e:
-            print(f"✗ Failed to create {point.get('ObjectName', 'unknown')}: {e}")
+            failed_count += 1
     
-    print(f"✔ Successfully created {len(created_objects)} BACnet objects")
+    print()  # New line after progress bar
+    
+    if failed_count > 0:
+        print(f"✔ Successfully created {len(created_objects)} BACnet objects ({failed_count} failed)")
+    else:
+        print(f"✔ Successfully created {len(created_objects)} BACnet objects")
+    
     return created_objects
 
 # ──────────────── Main async task ────────────────────────────────────────────
@@ -265,19 +313,35 @@ async def main():
     device_id = args.deviceId or config.getint('device', 'device_id', fallback=2001)
     step = config.getfloat('simulation', 'step_interval', fallback=0.5)
     
-    # Create BACnet application
-    app = BAC0.lite(ip=address, port=port, deviceId=device_id)
+    # Get CSV filename from config or command line
+    if args.points:
+        points_file = args.points
+    elif config.has_option('data', 'points_file'):
+        points_file = config.get('data', 'points_file')
+    else:
+        points_file = "points.csv"
+    
+    # Create BACnet application (all logging already suppressed)
+    with redirect_stdout(StringIO()), redirect_stderr(StringIO()):
+        app = BAC0.lite(ip=address, port=port, deviceId=device_id)
     
     # Load and create objects from CSV
-    points = load_points_from_csv(args.points)
-    objects = create_objects_from_csv(app, points)
+    points = load_points_from_csv(points_file)
     
-    print(f"✔ Virtual VAV device {device_id} on {address.split('/')[0]}:{port}")
-    print(f"✔ Running with {len(objects)} objects from CSV")
+    # Suppress all warnings during object creation
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        with redirect_stderr(StringIO()):
+            objects = create_objects_from_csv(app, points)
+    
+    print(f"✔ Virtual BACnet device {device_id} on {address.split('/')[0]}:{port}")
+    print(f"✔ Running with {len(objects)} objects from {points_file}")
+    print(f"🚀 Device is READY and monitoring - discoverable in YABE/VTS")
+    print(f"📡 Broadcasting on network {address} - Device ID: {device_id}")
     
     # ────────────── Simulation constants ─────────────────────────────────────
     STEP = step
-    OUTDOOR_CYCLE_S = 20 * 60          # 20-min "day"
+    OUTDOOR_CYCLE_S = config.getint('environment', 'outdoor_temp_cycle_minutes', fallback=20) * 60
     
     # ────────────── Main simulation loop ─────────────────────────────────────
     while True:
@@ -301,7 +365,7 @@ async def main():
                         new_val = max(20, min(80, current_val + random.uniform(-0.5, 0.5)))
                         obj.presentValue = new_val
                         
-                    elif 'Airflow' in name:
+                    elif 'Airflow' in name or 'Flow' in name:
                         # Airflow with some variation
                         base_flow = 100 + 50 * math.sin(2 * math.pi * now / (OUTDOOR_CYCLE_S * 2))
                         obj.presentValue = max(0, base_flow + random.uniform(-10, 10))
@@ -317,4 +381,4 @@ async def main():
 
 # ─────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main()) 

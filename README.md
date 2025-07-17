@@ -1,6 +1,6 @@
-# Virtual VAV BACnet Device Simulator
+# Virtual BACnet Device Simulator
 
-A Python-based BACnet/IP device simulator that emulates a Variable Air Volume (VAV) unit with realistic control behavior. This simulator loads point definitions from CSV files and creates fully functional BACnet objects that can be discovered and controlled by any BACnet client software.
+A Python-based BACnet/IP device simulator that loads point definitions from CSV files and creates fully functional BACnet objects with realistic simulation behavior. Originally designed for VAV units but supports any BACnet device type.
 
 ## Features
 
@@ -23,13 +23,13 @@ pip install BAC0
 
 ```bash
 # Run with default settings (auto-detects IP, uses port 47809)
-python virtual_vav_device.py
+python virtual_device.py
 
 # Run with custom CSV file
-python virtual_vav_device.py --points my_points.csv
+python virtual_device.py --points my_points.csv
 
 # Run with specific network settings
-python virtual_vav_device.py -a 192.168.1.100/24 --port 47808 -d 2001
+python virtual_device.py -a 192.168.1.100/24 --port 47808 -d 2001
 ```
 
 ### Expected Output
@@ -41,8 +41,10 @@ Creating analogInput 43: Air Valve Position Command
 Creating analogOutput 25: Minimum Flow Setpoint Multiplier BAS
 ...
 ✔ Successfully created 1139 BACnet objects
-✔ Virtual VAV device 3001 on 192.168.0.206:47809
-✔ Running with 1139 objects from CSV
+✔ Virtual BACnet device 3001 on 192.168.0.206:47809
+✔ Running with 1139 objects from points.csv
+🚀 Device is READY and monitoring - discoverable in YABE/VTS
+📡 Broadcasting on network 192.168.0.206/24 - Device ID: 3001
 ```
 
 ## Command Line Options
@@ -55,7 +57,7 @@ Creating analogOutput 25: Minimum Flow Setpoint Multiplier BAS
 | `-c, --config`   | Configuration file path     | `-c my_config.ini`    |
 | `-p, --points`   | Points CSV file path        | `-p my_points.csv`    |
 
-## Configuration File (vav.ini)
+## Configuration File (virtual_device.ini)
 
 ### [device] Section
 
@@ -178,7 +180,7 @@ Multistate Value,18,Communication Status,1,,
 ### Other BACnet Clients
 
 - Use detected IP address and port 47809
-- Device instance ID is configurable in vav.ini
+- Device instance ID is configurable in virtual_device.ini
 - Supports all standard BACnet services (Read/Write Property, Subscribe COV, etc.)
 
 ## Simulation Features
@@ -228,7 +230,7 @@ Multistate Value,18,Communication Status,1,,
 
 ### Performance Issues
 
-1. **Step Interval**: Increase `step_interval` in vav.ini for less CPU usage
+1. **Step Interval**: Increase `step_interval` in virtual_device.ini for less CPU usage
 2. **Object Count**: Large CSV files (1000+ objects) may cause slower startup
 3. **Simulation**: Reduce variation ranges to minimize calculation overhead
 
@@ -250,7 +252,7 @@ Modify the simulation loop in `main()` function to add custom control logic.
 
 ### Configuration Options
 
-Add new settings to vav.ini and update the configuration parsing section.
+Add new settings to virtual_device.ini and update the configuration parsing section.
 
 ## License
 
