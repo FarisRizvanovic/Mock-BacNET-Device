@@ -194,6 +194,7 @@ def create_objects_from_csv(app, points):
     created_objects = {}
     total_points = len(points)
     failed_count = 0
+    failed_objects = []  # Track failed objects for detailed reporting
     
     if total_points == 0:
         return created_objects
@@ -208,10 +209,13 @@ def create_objects_from_csv(app, points):
         'Binary Input': 'binaryInput',
         'Binary Output': 'binaryOutput',
         'Binary Value': 'binaryValue',
+        'Multi State Input': 'multistateInput',
+        'Multi State Output': 'multistateOutput',
+        'Multi State Value': 'multistateValue',
+        # Handle various case versions from CSV
         'Multistate Input': 'multistateInput',
         'Multistate Output': 'multistateOutput',
         'Multistate Value': 'multistateValue',
-        # Handle lowercase versions from CSV
         'multistateinput': 'multistateInput',
         'multistateoutput': 'multistateOutput',
         'multistatevalue': 'multistateValue'
@@ -301,14 +305,45 @@ def create_objects_from_csv(app, points):
             
             else:
                 failed_count += 1
+                failed_objects.append({
+                    'instance': instance,
+                    'name': name,
+                    'type': object_type,
+                    'error': f"Unsupported object type: {object_type} (mapped to: {bac_object_type})"
+                })
                 
         except Exception as e:
             failed_count += 1
+            failed_objects.append({
+                'instance': point.get('Instance', 'Unknown'),
+                'name': point.get('Name', 'Unknown'),
+                'type': point.get('Type', 'Unknown'),
+                'error': str(e)
+            })
     
     print()  # New line after progress bar
     
     if failed_count > 0:
         safe_print(f"✔ Successfully created {len(created_objects)} BACnet objects ({failed_count} failed)")
+        
+        # Show detailed error information for failed objects
+        safe_print(f"\n❌ FAILED OBJECTS ({failed_count} total):")
+        safe_print("-" * 50)
+        
+        # Group by error type for better readability
+        error_groups = {}
+        for obj in failed_objects:
+            error_key = obj['error']
+            if error_key not in error_groups:
+                error_groups[error_key] = []
+            error_groups[error_key].append(obj)
+        
+        for error, objects in error_groups.items():
+            safe_print(f"\n🔸 Error: {error}")
+            for obj in objects[:5]:  # Show first 5 of each error type
+                safe_print(f"   • Instance {obj['instance']}: {obj['name']} ({obj['type']})")
+            if len(objects) > 5:
+                safe_print(f"   ... and {len(objects) - 5} more with this error")
     else:
         safe_print(f"✔ Successfully created {len(created_objects)} BACnet objects")
     

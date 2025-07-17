@@ -1,0 +1,1415 @@
+Type,Instance,Name,PresentValue,Override,Description
+Analog Input,1,Facility Outdoor Air Temperature,77.01798 °F,,
+Analog Input,2,Facility Outdoor Air Humidity,85.28802 %,,
+Analog Input,3,Air Valve Position Command|vav-1,0 %,,
+Analog Input,4,Air Valve Size|vav-1,1700 CFM,,
+Analog Input,5,Discharge Air Flow|vav-1,1030.2 CFM,,
+Analog Input,6,Generic Temperature Input|vav-1,67.7 °F,,
+Analog Input,7,Heating Capacity Secondary Status|vav-1,100 %,,
+Analog Input,8,Reheat Type|vav-1,2,,
+Analog Input,9,Secondary Communication Address|vav-1,108,,
+Analog Input,10,Secondary Communication Link|vav-1,2,,
+Analog Input,11,Space Temperature Active|vav-1,71.1 °F,,
+Analog Input,12,Space Temperature Setpoint Active|vav-1,71.5 °F,,
+Analog Input,13,Supply Fan Speed Status|vav-1,0 %,,
+Analog Input,14,Supply Fan Type|vav-1,22,,
+Analog Input,15,Ventilation Ratio|vav-1,17 %,,
+Analog Input,16,Ventilation Setpoint Active|vav-1,170 CFM,,
+Analog Input,17,Air Valve Position Command|vav-2,61 %,,
+Analog Input,18,Air Valve Size|vav-2,1700 CFM,,
+Analog Input,19,Discharge Air Flow|vav-2,827.9 CFM,,
+Analog Input,20,Heating Capacity Secondary Status|vav-2,0 %,,
+Analog Input,21,Reheat Type|vav-2,2,,
+Analog Input,22,Secondary Communication Address|vav-2,107,,
+Analog Input,23,Secondary Communication Link|vav-2,2,,
+Analog Input,24,Space Temperature Active|vav-2,71.8 °F,,
+Analog Input,25,Space Temperature Setpoint Active|vav-2,73.5 °F,,
+Analog Input,26,Supply Fan Speed Status|vav-2,0 %,,
+Analog Input,27,Supply Fan Type|vav-2,22,,
+Analog Input,28,Ventilation Ratio|vav-2,21 %,,
+Analog Input,29,Ventilation Setpoint Active|vav-2,170 CFM,,
+Analog Input,30,Air Valve Position Command|vav-3,55 %,,
+Analog Input,31,Air Valve Size|vav-3,1100 CFM,,
+Analog Input,32,Discharge Air Flow|vav-3,510.4 CFM,,
+Analog Input,33,Heating Capacity Secondary Status|vav-3,100 %,,
+Analog Input,34,Reheat Type|vav-3,2,,
+Analog Input,35,Secondary Communication Address|vav-3,106,,
+Analog Input,36,Secondary Communication Link|vav-3,2,,
+Analog Input,37,Space Temperature Active|vav-3,72.1 °F,,
+Analog Input,38,Space Temperature Setpoint Active|vav-3,72.5 °F,,
+Analog Input,39,Supply Fan Speed Status|vav-3,0 %,,
+Analog Input,40,Supply Fan Type|vav-3,22,,
+Analog Input,41,Ventilation Ratio|vav-3,0 %,,
+Analog Input,42,Ventilation Setpoint Active|vav-3,0 CFM,,
+Analog Input,43,Air Valve Position Command|vav-4,100 %,,
+Analog Input,44,Air Valve Size|vav-4,1100 CFM,,
+Analog Input,45,Discharge Air Flow|vav-4,641.3 CFM,,
+Analog Input,46,Heating Capacity Secondary Status|vav-4,0 %,,
+Analog Input,47,Reheat Type|vav-4,2,,
+Analog Input,48,Secondary Communication Address|vav-4,105,,
+Analog Input,49,Secondary Communication Link|vav-4,2,,
+Analog Input,50,Space Temperature Active|vav-4,72.9 °F,,
+Analog Input,51,Space Temperature Setpoint Active|vav-4,75.5 °F,,
+Analog Input,52,Supply Fan Type|vav-4,22,,
+Analog Input,53,Ventilation Ratio|vav-4,17 %,,
+Analog Input,54,Ventilation Setpoint Active|vav-4,110 CFM,,
+Analog Input,55,Air Valve Position Command|vav-5,100 %,,
+Analog Input,56,Air Valve Size|vav-5,1100 CFM,,
+Analog Input,57,Discharge Air Flow|vav-5,503.8 CFM,,
+Analog Input,58,Heating Capacity Secondary Status|vav-5,0 %,,
+Analog Input,59,Reheat Type|vav-5,2,,
+Analog Input,60,Secondary Communication Address|vav-5,104,,
+Analog Input,61,Secondary Communication Link|vav-5,2,,
+Analog Input,62,Space Temperature Active|vav-5,74.7 °F,,
+Analog Input,63,Space Temperature Setpoint Active|vav-5,73.5 °F,,
+Analog Input,64,Supply Fan Type|vav-5,22,,
+Analog Input,65,Ventilation Ratio|vav-5,22 %,,
+Analog Input,66,Ventilation Setpoint Active|vav-5,110 CFM,,
+Analog Input,67,Air Valve Position Command|vav-6,100 %,,
+Analog Input,68,Air Valve Size|vav-6,600 CFM,,
+Analog Input,69,Discharge Air Flow|vav-6,369 CFM,,
+Analog Input,70,Heating Capacity Secondary Status|vav-6,0 %,,
+Analog Input,71,Reheat Type|vav-6,2,,
+Analog Input,72,Secondary Communication Address|vav-6,103,,
+Analog Input,73,Secondary Communication Link|vav-6,2,,
+Analog Input,74,Space Temperature Active|vav-6,75.4 °F,,
+Analog Input,75,Space Temperature Setpoint Active|vav-6,73.5 °F,,
+Analog Input,76,Supply Fan Speed Status|vav-6,0 %,,
+Analog Input,77,Supply Fan Type|vav-6,22,,
+Analog Input,78,Ventilation Ratio|vav-6,16 %,,
+Analog Input,79,Ventilation Setpoint Active|vav-6,60 CFM,,
+Analog Input,80,Air Valve Position Command|vav-7,0 %,,
+Analog Input,81,Air Valve Size|vav-7,1700 CFM,,
+Analog Input,82,Discharge Air Flow|vav-7,209.1 CFM,,
+Analog Input,83,Generic Temperature Input|vav-7,59.5 °F,,
+Analog Input,84,Heating Capacity Secondary Status|vav-7,0 %,,
+Analog Input,85,Reheat Type|vav-7,2,,
+Analog Input,86,Secondary Communication Address|vav-7,102,,
+Analog Input,87,Secondary Communication Link|vav-7,2,,
+Analog Input,88,Space Temperature Active|vav-7,73 °F,,
+Analog Input,89,Space Temperature Setpoint Active|vav-7,73.5 °F,,
+Analog Input,90,Supply Fan Speed Status|vav-7,0 %,,
+Analog Input,91,Supply Fan Type|vav-7,22,,
+Analog Input,92,Ventilation Ratio|vav-7,83 %,,
+Analog Input,93,Ventilation Setpoint Active|vav-7,170 CFM,,
+Analog Input,94,Air Valve Position Command|vav-8,36 %,,
+Analog Input,95,Air Valve Size|vav-8,1700 CFM,,
+Analog Input,96,Discharge Air Flow|vav-8,414.8 CFM,,
+Analog Input,97,Generic Temperature Input|vav-8,52.3 °F,,
+Analog Input,98,Heating Capacity Secondary Status|vav-8,0 %,,
+Analog Input,99,Reheat Type|vav-8,2,,
+Analog Input,100,Secondary Communication Address|vav-8,101,,
+Analog Input,101,Secondary Communication Link|vav-8,2,,
+Analog Input,102,Space Temperature Active|vav-8,72.9 °F,,
+Analog Input,103,Space Temperature Setpoint Active|vav-8,73.5 °F,,
+Analog Input,104,Supply Fan Speed Status|vav-8,0 %,,
+Analog Input,105,Supply Fan Type|vav-8,22,,
+Analog Input,106,Ventilation Ratio|vav-8,40 %,,
+Analog Input,107,Ventilation Setpoint Active|vav-8,170 CFM,,
+Analog Input,108,Air Valve Position Command|vav-9,100 %,,
+Analog Input,109,Air Valve Size|vav-9,1700 CFM,,
+Analog Input,110,Discharge Air Flow|vav-9,821.1 CFM,,
+Analog Input,111,Generic Temperature Input|vav-9,75.9 °F,,
+Analog Input,112,Heating Capacity Secondary Status|vav-9,0 %,,
+Analog Input,113,Reheat Type|vav-9,2,,
+Analog Input,114,Secondary Communication Address|vav-9,100,,
+Analog Input,115,Secondary Communication Link|vav-9,2,,
+Analog Input,116,Space Temperature Active|vav-9,73.5 °F,,
+Analog Input,117,Space Temperature Setpoint Active|vav-9,73.5 °F,,
+Analog Input,118,Supply Fan Speed Status|vav-9,0 %,,
+Analog Input,119,Supply Fan Type|vav-9,22,,
+Analog Input,120,Ventilation Ratio|vav-9,21 %,,
+Analog Input,121,Ventilation Setpoint Active|vav-9,170 CFM,,
+Analog Input,122,Air Valve Position Command|vav-10,65 %,,
+Analog Input,123,Air Valve Size|vav-10,1100 CFM,,
+Analog Input,124,Discharge Air Flow|vav-10,573.1 CFM,,
+Analog Input,125,Heating Capacity Secondary Status|vav-10,0 %,,
+Analog Input,126,Reheat Type|vav-10,2,,
+Analog Input,127,Secondary Communication Address|vav-10,99,,
+Analog Input,128,Secondary Communication Link|vav-10,2,,
+Analog Input,129,Space Temperature Active|vav-10,72.4 °F,,
+Analog Input,130,Space Temperature Setpoint Active|vav-10,73.5 °F,,
+Analog Input,131,Supply Fan Speed Status|vav-10,0 %,,
+Analog Input,132,Supply Fan Type|vav-10,22,,
+Analog Input,133,Ventilation Ratio|vav-10,19 %,,
+Analog Input,134,Ventilation Setpoint Active|vav-10,110 CFM,,
+Analog Input,135,Air Valve Position Command|vav-11,34 %,,
+Analog Input,136,Air Valve Size|vav-11,1700 CFM,,
+Analog Input,137,Discharge Air Flow|vav-11,295.8 CFM,,
+Analog Input,138,Generic Temperature Input|vav-11,59.1 °F,,
+Analog Input,139,Heating Capacity Secondary Status|vav-11,0 %,,
+Analog Input,140,Reheat Type|vav-11,2,,
+Analog Input,141,Secondary Communication Address|vav-11,98,,
+Analog Input,142,Secondary Communication Link|vav-11,2,,
+Analog Input,143,Space Temperature Active|vav-11,72.2 °F,,
+Analog Input,144,Space Temperature Setpoint Active|vav-11,73.5 °F,,
+Analog Input,145,Supply Fan Speed Status|vav-11,0 %,,
+Analog Input,146,Supply Fan Type|vav-11,22,,
+Analog Input,147,Ventilation Ratio|vav-11,56 %,,
+Analog Input,148,Ventilation Setpoint Active|vav-11,170 CFM,,
+Analog Input,149,Air Valve Position Command|vav-12,57 %,,
+Analog Input,150,Air Valve Size|vav-12,1700 CFM,,
+Analog Input,151,Discharge Air Flow|vav-12,848.3 CFM,,
+Analog Input,152,Generic Temperature Input|vav-12,59.1 °F,,
+Analog Input,153,Heating Capacity Secondary Status|vav-12,100 %,,
+Analog Input,154,Reheat Type|vav-12,2,,
+Analog Input,155,Secondary Communication Address|vav-12,97,,
+Analog Input,156,Secondary Communication Link|vav-12,2,,
+Analog Input,157,Space Temperature Active|vav-12,72.2 °F,,
+Analog Input,158,Space Temperature Setpoint Active|vav-12,73 °F,,
+Analog Input,159,Supply Fan Speed Status|vav-12,0 %,,
+Analog Input,160,Supply Fan Type|vav-12,22,,
+Analog Input,161,Ventilation Ratio|vav-12,0 %,,
+Analog Input,162,Ventilation Setpoint Active|vav-12,0 CFM,,
+Analog Input,163,Air Valve Position Command|vav-13,100 %,,
+Analog Input,164,Air Valve Size|vav-13,1100 CFM,,
+Analog Input,165,Discharge Air Flow|vav-13,578.6 CFM,,
+Analog Input,166,Generic Temperature Input|vav-13,59.2 °F,,
+Analog Input,167,Heating Capacity Secondary Status|vav-13,0 %,,
+Analog Input,168,Reheat Type|vav-13,2,,
+Analog Input,169,Secondary Communication Address|vav-13,96,,
+Analog Input,170,Secondary Communication Link|vav-13,2,,
+Analog Input,171,Space Temperature Active|vav-13,75.5 °F,,
+Analog Input,172,Space Temperature Setpoint Active|vav-13,73.5 °F,,
+Analog Input,173,Supply Fan Type|vav-13,22,,
+Analog Input,174,Ventilation Ratio|vav-13,19 %,,
+Analog Input,175,Ventilation Setpoint Active|vav-13,110 CFM,,
+Analog Input,176,Air Valve Position Command|vav-14,57 %,,
+Analog Input,177,Air Valve Size|vav-14,600 CFM,,
+Analog Input,178,Discharge Air Flow|vav-14,291.6 CFM,,
+Analog Input,179,Generic Temperature Input|vav-14,84.3 °F,,
+Analog Input,180,Heating Capacity Secondary Status|vav-14,100 %,,
+Analog Input,181,Reheat Type|vav-14,2,,
+Analog Input,182,Secondary Communication Address|vav-14,95,,
+Analog Input,183,Secondary Communication Link|vav-14,2,,
+Analog Input,184,Space Temperature Active|vav-14,70.6 °F,,
+Analog Input,185,Space Temperature Setpoint Active|vav-14,71.5 °F,,
+Analog Input,186,Supply Fan Type|vav-14,22,,
+Analog Input,187,Ventilation Ratio|vav-14,21 %,,
+Analog Input,188,Ventilation Setpoint Active|vav-14,60 CFM,,
+Analog Input,189,Air Valve Position Command|vav-15,100 %,,
+Analog Input,190,Air Valve Size|vav-15,600 CFM,,
+Analog Input,191,Discharge Air Flow|vav-15,316.8 CFM,,
+Analog Input,192,Heating Capacity Secondary Status|vav-15,0 %,,
+Analog Input,193,Reheat Type|vav-15,2,,
+Analog Input,194,Secondary Communication Address|vav-15,94,,
+Analog Input,195,Secondary Communication Link|vav-15,2,,
+Analog Input,196,Space Temperature Active|vav-15,70.6 °F,,
+Analog Input,197,Space Temperature Setpoint Active|vav-15,71.5 °F,,
+Analog Input,198,Supply Fan Speed Status|vav-15,0 %,,
+Analog Input,199,Supply Fan Type|vav-15,22,,
+Analog Input,200,Ventilation Ratio|vav-15,19 %,,
+Analog Input,201,Ventilation Setpoint Active|vav-15,60 CFM,,
+Analog Input,202,Air Valve Position Command|vav-16,100 %,,
+Analog Input,203,Air Valve Size|vav-16,1100 CFM,,
+Analog Input,204,Discharge Air Flow|vav-16,630.3 CFM,,
+Analog Input,205,Heating Capacity Secondary Status|vav-16,0 %,,
+Analog Input,206,Reheat Type|vav-16,2,,
+Analog Input,207,Secondary Communication Address|vav-16,93,,
+Analog Input,208,Secondary Communication Link|vav-16,2,,
+Analog Input,209,Space Temperature Active|vav-16,75.7 °F,,
+Analog Input,210,Space Temperature Setpoint Active|vav-16,73.5 °F,,
+Analog Input,211,Supply Fan Type|vav-16,22,,
+Analog Input,212,Ventilation Ratio|vav-16,17 %,,
+Analog Input,213,Ventilation Setpoint Active|vav-16,110 CFM,,
+Analog Input,214,Air Valve Position Command|vav-17,38 %,,
+Analog Input,215,Air Valve Size|vav-17,1700 CFM,,
+Analog Input,216,Discharge Air Flow|vav-17,697 CFM,,
+Analog Input,217,Generic Temperature Input|vav-17,72.4 °F,,
+Analog Input,218,Heating Capacity Secondary Status|vav-17,0 %,,
+Analog Input,219,Reheat Type|vav-17,2,,
+Analog Input,220,Secondary Communication Address|vav-17,92,,
+Analog Input,221,Secondary Communication Link|vav-17,2,,
+Analog Input,222,Space Temperature Active|vav-17,73.7 °F,,
+Analog Input,223,Space Temperature Setpoint Active|vav-17,74.5 °F,,
+Analog Input,224,Supply Fan Speed Status|vav-17,0 %,,
+Analog Input,225,Supply Fan Type|vav-17,22,,
+Analog Input,226,Ventilation Ratio|vav-17,24 %,,
+Analog Input,227,Ventilation Setpoint Active|vav-17,170 CFM,,
+Analog Input,228,Air Valve Position Command|vav-18,100 %,,
+Analog Input,229,Air Valve Size|vav-18,1100 CFM,,
+Analog Input,230,Discharge Air Flow|vav-18,530.2 CFM,,
+Analog Input,231,Heating Capacity Secondary Status|vav-18,100 %,,
+Analog Input,232,Reheat Type|vav-18,2,,
+Analog Input,233,Secondary Communication Address|vav-18,91,,
+Analog Input,234,Secondary Communication Link|vav-18,2,,
+Analog Input,235,Space Temperature Active|vav-18,70.1 °F,,
+Analog Input,236,Space Temperature Setpoint Active|vav-18,71.5 °F,,
+Analog Input,237,Supply Fan Speed Status|vav-18,0 %,,
+Analog Input,238,Supply Fan Type|vav-18,22,,
+Analog Input,239,Ventilation Ratio|vav-18,21 %,,
+Analog Input,240,Ventilation Setpoint Active|vav-18,110 CFM,,
+Analog Input,241,Air Valve Position Command|vav-19,100 %,,
+Analog Input,242,Air Valve Size|vav-19,1100 CFM,,
+Analog Input,243,Discharge Air Flow|vav-19,555.5 CFM,,
+Analog Input,244,Heating Capacity Secondary Status|vav-19,0 %,,
+Analog Input,245,Reheat Type|vav-19,2,,
+Analog Input,246,Secondary Communication Address|vav-19,90,,
+Analog Input,247,Secondary Communication Link|vav-19,2,,
+Analog Input,248,Space Temperature Active|vav-19,73.6 °F,,
+Analog Input,249,Space Temperature Setpoint Active|vav-19,73.5 °F,,
+Analog Input,250,Supply Fan Type|vav-19,22,,
+Analog Input,251,Ventilation Ratio|vav-19,20 %,,
+Analog Input,252,Ventilation Setpoint Active|vav-19,110 CFM,,
+Analog Input,253,Air Valve Position Command|vav-20,46 %,,
+Analog Input,254,Air Valve Size|vav-20,300 CFM,,
+Analog Input,255,Discharge Air Flow|vav-20,130.8 CFM,,
+Analog Input,256,Heating Capacity Secondary Status|vav-20,0 %,,
+Analog Input,257,Reheat Type|vav-20,2,,
+Analog Input,258,Secondary Communication Address|vav-20,78,,
+Analog Input,259,Secondary Communication Link|vav-20,2,,
+Analog Input,260,Space Temperature Active|vav-20,72.3 °F,,
+Analog Input,261,Space Temperature Setpoint Active|vav-20,73.5 °F,,
+Analog Input,262,Supply Fan Type|vav-20,22,,
+Analog Input,263,Ventilation Ratio|vav-20,23 %,,
+Analog Input,264,Ventilation Setpoint Active|vav-20,30 CFM,,
+Analog Input,265,Air Valve Position Command|vav-21,0 %,,
+Analog Input,266,Air Valve Size|vav-21,1100 CFM,,
+Analog Input,267,Discharge Air Flow|vav-21,264 CFM,,
+Analog Input,268,Heating Capacity Secondary Status|vav-21,0 %,,
+Analog Input,269,Reheat Type|vav-21,2,,
+Analog Input,270,Secondary Communication Address|vav-21,77,,
+Analog Input,271,Secondary Communication Link|vav-21,2,,
+Analog Input,272,Space Temperature Active|vav-21,79.2 °F,,
+Analog Input,273,Space Temperature Setpoint Active|vav-21,80.5 °F,,
+Analog Input,274,Supply Fan Speed Status|vav-21,0 %,,
+Analog Input,275,Supply Fan Type|vav-21,22,,
+Analog Input,276,Ventilation Ratio|vav-21,0 %,,
+Analog Input,277,Ventilation Setpoint Active|vav-21,110 CFM,,
+Analog Input,278,Air Valve Position Command|vav-22,100 %,,
+Analog Input,279,Air Valve Size|vav-22,1100 CFM,,
+Analog Input,280,Discharge Air Flow|vav-22,717.2 CFM,,
+Analog Input,281,Heating Capacity Secondary Status|vav-22,0 %,,
+Analog Input,282,Reheat Type|vav-22,2,,
+Analog Input,283,Secondary Communication Address|vav-22,76,,
+Analog Input,284,Secondary Communication Link|vav-22,2,,
+Analog Input,285,Space Temperature Active|vav-22,71.7 °F,,
+Analog Input,286,Space Temperature Setpoint Active|vav-22,72.5 °F,,
+Analog Input,287,Supply Fan Type|vav-22,22,,
+Analog Input,288,Ventilation Ratio|vav-22,15.000001 %,,
+Analog Input,289,Ventilation Setpoint Active|vav-22,110 CFM,,
+Analog Input,290,Air Valve Position Command|vav-23,14 %,,
+Analog Input,291,Air Valve Size|vav-23,300 CFM,,
+Analog Input,292,Discharge Air Flow|vav-23,119.7 CFM,,
+Analog Input,293,Heating Capacity Secondary Status|vav-23,0 %,,
+Analog Input,294,Reheat Type|vav-23,2,,
+Analog Input,295,Secondary Communication Address|vav-23,75,,
+Analog Input,296,Secondary Communication Link|vav-23,2,,
+Analog Input,297,Space Temperature Active|vav-23,74.2 °F,,
+Analog Input,298,Space Temperature Setpoint Active|vav-23,72.5 °F,,
+Analog Input,299,Supply Fan Speed Status|vav-23,0 %,,
+Analog Input,300,Supply Fan Type|vav-23,22,,
+Analog Input,301,Ventilation Ratio|vav-23,25 %,,
+Analog Input,302,Ventilation Setpoint Active|vav-23,30 CFM,,
+Analog Input,303,Air Valve Position Command|vav-24,0 %,,
+Analog Input,304,Air Valve Size|vav-24,1100 CFM,,
+Analog Input,305,Discharge Air Flow|vav-24,0 CFM,,
+Analog Input,306,Heating Capacity Secondary Status|vav-24,0 %,,
+Analog Input,307,Reheat Type|vav-24,2,,
+Analog Input,308,Secondary Communication Address|vav-24,74,,
+Analog Input,309,Secondary Communication Link|vav-24,2,,
+Analog Input,310,Space Temperature Active|vav-24,77.5 °F,,
+Analog Input,311,Space Temperature Setpoint Active|vav-24,78.5 °F,,
+Analog Input,312,Supply Fan Speed Status|vav-24,0 %,,
+Analog Input,313,Supply Fan Type|vav-24,22,,
+Analog Input,314,Ventilation Ratio|vav-24,0 %,,
+Analog Input,315,Ventilation Setpoint Active|vav-24,110 CFM,,
+Analog Input,316,Air Valve Position Command|vav-25,6 %,,
+Analog Input,317,Air Valve Size|vav-25,1100 CFM,,
+Analog Input,318,Discharge Air Flow|vav-25,0 CFM,,
+Analog Input,319,Generic Temperature Input|vav-25,61.3 °F,,
+Analog Input,320,Heating Capacity Secondary Status|vav-25,0 %,,
+Analog Input,321,Reheat Type|vav-25,2,,
+Analog Input,322,Secondary Communication Address|vav-25,73,,
+Analog Input,323,Secondary Communication Link|vav-25,2,,
+Analog Input,324,Space Temperature Active|vav-25,78.3 °F,,
+Analog Input,325,Space Temperature Setpoint Active|vav-25,79 °F,,
+Analog Input,326,Supply Fan Speed Status|vav-25,0 %,,
+Analog Input,327,Supply Fan Type|vav-25,22,,
+Analog Input,328,Ventilation Ratio|vav-25,0 %,,
+Analog Input,329,Ventilation Setpoint Active|vav-25,110 CFM,,
+Analog Input,330,Air Valve Position Command|vav-26,0 %,,
+Analog Input,331,Air Valve Size|vav-26,1100 CFM,,
+Analog Input,332,Discharge Air Flow|vav-26,0 CFM,,
+Analog Input,333,Generic Temperature Input|vav-26,76.4 °F,,
+Analog Input,334,Heating Capacity Secondary Status|vav-26,0 %,,
+Analog Input,335,Reheat Type|vav-26,2,,
+Analog Input,336,Secondary Communication Address|vav-26,72,,
+Analog Input,337,Secondary Communication Link|vav-26,2,,
+Analog Input,338,Space Temperature Active|vav-26,76.3 °F,,
+Analog Input,339,Space Temperature Setpoint Active|vav-26,79.5 °F,,
+Analog Input,340,Supply Fan Speed Status|vav-26,0 %,,
+Analog Input,341,Supply Fan Type|vav-26,22,,
+Analog Input,342,Ventilation Ratio|vav-26,0 %,,
+Analog Input,343,Ventilation Setpoint Active|vav-26,110 CFM,,
+Analog Input,344,Air Valve Position Command|vav-27,9 %,,
+Analog Input,345,Air Valve Size|vav-27,600 CFM,,
+Analog Input,346,Discharge Air Flow|vav-27,66 CFM,,
+Analog Input,347,Generic Temperature Input|vav-27,63.7 °F,,
+Analog Input,348,Heating Capacity Secondary Status|vav-27,0 %,,
+Analog Input,349,Reheat Type|vav-27,2,,
+Analog Input,350,Secondary Communication Address|vav-27,70,,
+Analog Input,351,Secondary Communication Link|vav-27,2,,
+Analog Input,352,Space Temperature Active|vav-27,77.9 °F,,
+Analog Input,353,Space Temperature Setpoint Active|vav-27,78.5 °F,,
+Analog Input,354,Supply Fan Speed Status|vav-27,0 %,,
+Analog Input,355,Supply Fan Type|vav-27,22,,
+Analog Input,356,Ventilation Ratio|vav-27,0 %,,
+Analog Input,357,Ventilation Setpoint Active|vav-27,60 CFM,,
+Analog Input,358,Air Valve Position Command|vav-28,0 %,,
+Analog Input,359,Air Valve Size|vav-28,300 CFM,,
+Analog Input,360,Discharge Air Flow|vav-28,0 CFM,,
+Analog Input,361,Generic Temperature Input|vav-28,75.8 °F,,
+Analog Input,362,Heating Capacity Secondary Status|vav-28,0 %,,
+Analog Input,363,Reheat Type|vav-28,2,,
+Analog Input,364,Secondary Communication Address|vav-28,71,,
+Analog Input,365,Secondary Communication Link|vav-28,2,,
+Analog Input,366,Space Temperature Active|vav-28,78.5 °F,,
+Analog Input,367,Space Temperature Setpoint Active|vav-28,79.5 °F,,
+Analog Input,368,Supply Fan Speed Status|vav-28,0 %,,
+Analog Input,369,Supply Fan Type|vav-28,22,,
+Analog Input,370,Ventilation Ratio|vav-28,0 %,,
+Analog Input,371,Ventilation Setpoint Active|vav-28,30 CFM,,
+Analog Input,372,activeSetpoint|APEC Classrooms Area-1,74.9952 °F,,
+Analog Input,373,outdoorAirDewPoint|APEC Classrooms Area-1,72.279945 °F,,
+Analog Input,374,outdoorAirEnthalpy|APEC Classrooms Area-1,37.165115 BTUS_PER_POUND_DRY_AIR,,
+Analog Input,375,averageSpaceTemperature|APEC Classrooms Area-1,72.85263 °F,,
+Analog Input,376,spaceDewPointTemperature|APEC Classrooms Area-1,44.82958 °F,,
+Analog Input,377,spaceEnthalpy|APEC Classrooms Area-1,23.678818 BTUS_PER_POUND_DRY_AIR,,
+Analog Input,378,spaceMaxTemperature|APEC Classrooms Area-1,75.9 °F,,
+Analog Input,379,spaceMinTemperature|APEC Classrooms Area-1,70.1 °F,,
+Analog Input,380,occupiedHeatSetpoint|APEC Classrooms Area-1,70.012794 °F,,
+Analog Input,381,occupiedCoolSetpoint|APEC Classrooms Area-1,74.9952 °F,,
+Analog Input,382,standbyHeatSetpoint|APEC Classrooms Area-1,64.998 °F,,
+Analog Input,383,standbyCoolSetpoint|APEC Classrooms Area-1,80.009995 °F,,
+Analog Input,384,activeSetpoint|APEC Offices Area-2,74.9952 °F,,
+Analog Input,385,outdoorAirDewPoint|APEC Offices Area-2,72.279945 °F,,
+Analog Input,386,outdoorAirEnthalpy|APEC Offices Area-2,37.165115 BTUS_PER_POUND_DRY_AIR,,
+Analog Input,387,averageSpaceTemperature|APEC Offices Area-2,76.7 °F,,
+Analog Input,388,spaceDewPointTemperature|APEC Offices Area-2,50.673584 °F,,
+Analog Input,389,spaceEnthalpy|APEC Offices Area-2,26.964096 BTUS_PER_POUND_DRY_AIR,,
+Analog Input,390,spaceMaxTemperature|APEC Offices Area-2,79.2 °F,,
+Analog Input,391,spaceMinTemperature|APEC Offices Area-2,71.7 °F,,
+Analog Input,392,occupiedHeatSetpoint|APEC Offices Area-2,70.012794 °F,,
+Analog Input,393,occupiedCoolSetpoint|APEC Offices Area-2,74.9952 °F,,
+Analog Input,394,standbyHeatSetpoint|APEC Offices Area-2,64.998 °F,,
+Analog Input,395,standbyCoolSetpoint|APEC Offices Area-2,80.009995 °F,,
+Analog Input,396,ductPressOptMaxPos|VPEC AHU-1E VAS-1,100 %,,
+Analog Input,397,ventOptVavAirflowGross|VPEC AHU-1E VAS-1,11987.601 CFM,,
+Analog Input,398,changeoverNormalCool|VPEC AHU-1E VAS-1,0,,
+Analog Input,399,changeoverStrongCool|VPEC AHU-1E VAS-1,0,,
+Analog Input,400,changeoverCoolDeviation|VPEC AHU-1E VAS-1,0 Δ°F,,
+Analog Input,401,changeoverNormalHeat|VPEC AHU-1E VAS-1,0,,
+Analog Input,402,changeoverStrongHeat|VPEC AHU-1E VAS-1,0,,
+Analog Input,403,changeoverHeatDeviation|VPEC AHU-1E VAS-1,0 Δ°F,,
+Analog Input,404,spaceTempAverage|VPEC AHU-1E VAS-1,73.93214 °F,,
+Analog Input,405,spaceTempMinimum|VPEC AHU-1E VAS-1,70.1 °F,,
+Analog Input,406,spaceTempMaximum|VPEC AHU-1E VAS-1,79.2 °F,,
+Analog Input,407,minDeviation|VPEC AHU-1E VAS-1,-3.199997 Δ°F,,
+Analog Input,408,maxDeviation|VPEC AHU-1E VAS-1,2.4000015 Δ°F,,
+Analog Input,409,maxHeatValvePosition|VPEC AHU-1E VAS-1,100 %,,
+Analog Input,410,Generic Temperature Input|vav-20,59.6 °F,,
+Analog Input,411,zFieldhouse KW,0 KILOWATTS,,Reading From Summit Fieldhouse
+Analog Input,412,zLLRC Master KW,453.5093 KILOWATTS,,Reading From Summit LLRC
+Analog Input,413,zLLRC Slave KW,2267.5464 KILOWATTS,,Reading From Summit LLRC
+Analog Input,414,Generic Temperature Input|vav-5,59.6 °F,,
+Analog Input,415,Generic Temperature Input|vav-3,68.6 °F,,
+Analog Input,416,Discharge Air Temperature|vav-1,67.7 °F,,
+Analog Input,417,Discharge Air Temperature|vav-11,59.1 °F,,
+Analog Input,418,Discharge Air Temperature|vav-12,59.1 °F,,
+Analog Input,419,Discharge Air Temperature|vav-13,59.2 °F,,
+Analog Input,420,Discharge Air Temperature|vav-14,84.3 °F,,
+Analog Input,421,Discharge Air Temperature|vav-17,72.4 °F,,
+Analog Input,422,Discharge Air Temperature|vav-20,59.6 °F,,
+Analog Input,423,Discharge Air Temperature|vav-25,61.3 °F,,
+Analog Input,424,Discharge Air Temperature|vav-26,76.4 °F,,
+Analog Input,425,Discharge Air Temperature|vav-27,63.7 °F,,
+Analog Input,426,Discharge Air Temperature|vav-28,75.8 °F,,
+Analog Input,427,Discharge Air Temperature|vav-3,68.6 °F,,
+Analog Input,428,Discharge Air Temperature|vav-5,59.6 °F,,
+Analog Input,429,Discharge Air Temperature|vav-7,59.5 °F,,
+Analog Input,430,Discharge Air Temperature|vav-8,52.3 °F,,
+Analog Input,431,Discharge Air Temperature|vav-9,75.9 °F,,
+Analog Input,432,Facility OA Temp SC-102,77.01798 °F,,
+Analog Input,433,Facility OA Humidity SC-102,85.28802 %,,
+Analog Input,434,Supply Fan Speed Status|vav-13,0 %,,
+Analog Input,435,Supply Fan Speed Status|vav-14,100 %,,
+Analog Input,436,Supply Fan Speed Status|vav-16,0 %,,
+Analog Input,437,Supply Fan Speed Status|vav-19,0 %,,
+Analog Input,438,Supply Fan Speed Status|vav-20,100 %,,
+Analog Input,439,Supply Fan Speed Status|vav-22,100 %,,
+Analog Input,440,Supply Fan Speed Status|vav-4,0 %,,
+Analog Input,441,Supply Fan Speed Status|vav-5,0 %,,
+Analog Output,1,Minimum Flow Setpoint Multiplier BAS|vav-1,1,1 at Level 9: Unspecified,
+Analog Output,2,Source Temperature BAS|vav-1,56.491478 °F,56.491478 °F at Level 10: Unspecified,
+Analog Output,3,Occupied Offset|vav-1,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,4,Space Temperature Setpoint BAS|vav-1,72.504 °F,—,
+Analog Output,5,Occupied Standby Offset|vav-1,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,6,Unoccupied Cooling Setpoint|vav-1,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,7,Unoccupied Heating Setpoint|vav-1,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,8,Ventilation Setpoint BAS|vav-1,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,9,Minimum Flow Setpoint Multiplier BAS|vav-2,1,1 at Level 9: Unspecified,
+Analog Output,10,Source Temperature BAS|vav-2,56.4054 °F,56.4054 °F at Level 10: Unspecified,
+Analog Output,11,Occupied Offset|vav-2,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,12,Space Temperature Setpoint BAS|vav-2,72.504 °F,—,
+Analog Output,13,Occupied Standby Offset|vav-2,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,14,Unoccupied Cooling Setpoint|vav-2,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,15,Unoccupied Heating Setpoint|vav-2,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,16,Ventilation Setpoint BAS|vav-2,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,17,Minimum Flow Setpoint Multiplier BAS|vav-3,1,—,
+Analog Output,18,Source Temperature BAS|vav-3,56.4054 °F,56.4054 °F at Level 10: Unspecified,
+Analog Output,19,Occupied Offset|vav-3,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,20,Space Temperature Setpoint BAS|vav-3,73.504 °F,73.504 °F at Level 12: Unspecified,
+Analog Output,21,Occupied Standby Offset|vav-3,0 Δ°F,0 Δ°F at Level 13: Unspecified,
+Analog Output,22,Unoccupied Cooling Setpoint|vav-3,84.995995 °F,—,
+Analog Output,23,Unoccupied Heating Setpoint|vav-3,60.01199 °F,—,
+Analog Output,24,Ventilation Setpoint BAS|vav-3,0 CFM,0 CFM at Level 5: Critical Equipment Control,
+Analog Output,25,Minimum Flow Setpoint Multiplier BAS|vav-4,1,—,
+Analog Output,26,Source Temperature BAS|vav-4,56.491478 °F,56.491478 °F at Level 10: Unspecified,
+Analog Output,27,Occupied Offset|vav-4,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,28,Space Temperature Setpoint BAS|vav-4,72.504 °F,—,
+Analog Output,29,Occupied Standby Offset|vav-4,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,30,Unoccupied Cooling Setpoint|vav-4,84.995995 °F,—,
+Analog Output,31,Unoccupied Heating Setpoint|vav-4,60.01199 °F,—,
+Analog Output,32,Ventilation Setpoint BAS|vav-4,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,33,Minimum Flow Setpoint Multiplier BAS|vav-5,1,—,
+Analog Output,34,Source Temperature BAS|vav-5,56.491478 °F,56.491478 °F at Level 10: Unspecified,
+Analog Output,35,Occupied Offset|vav-5,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,36,Space Temperature Setpoint BAS|vav-5,72.504 °F,—,
+Analog Output,37,Occupied Standby Offset|vav-5,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,38,Unoccupied Cooling Setpoint|vav-5,80 °F,80 °F at Level 12: Unspecified,
+Analog Output,39,Unoccupied Heating Setpoint|vav-5,60.01199 °F,—,
+Analog Output,40,Ventilation Setpoint BAS|vav-5,110 CFM (OutOfService),—,
+Analog Output,41,Minimum Flow Setpoint Multiplier BAS|vav-6,1,—,
+Analog Output,42,Source Temperature BAS|vav-6,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,43,Occupied Offset|vav-6,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,44,Space Temperature Setpoint BAS|vav-6,72.504 °F,—,
+Analog Output,45,Occupied Standby Offset|vav-6,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,46,Unoccupied Cooling Setpoint|vav-6,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,47,Unoccupied Heating Setpoint|vav-6,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,48,Ventilation Setpoint BAS|vav-6,60 CFM (OutOfService),—,
+Analog Output,49,Minimum Flow Setpoint Multiplier BAS|vav-7,0.25,0.25 at Level 9: Unspecified,
+Analog Output,50,Source Temperature BAS|vav-7,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,51,Occupied Offset|vav-7,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,52,Space Temperature Setpoint BAS|vav-7,72.504 °F,—,
+Analog Output,53,Occupied Standby Offset|vav-7,2.5 Δ°F,2.5 Δ°F at Level 13: Unspecified,
+Analog Output,54,Unoccupied Cooling Setpoint|vav-7,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,55,Unoccupied Heating Setpoint|vav-7,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,56,Ventilation Setpoint BAS|vav-7,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,57,Minimum Flow Setpoint Multiplier BAS|vav-8,0.25,0.25 at Level 9: Unspecified,
+Analog Output,58,Source Temperature BAS|vav-8,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,59,Occupied Offset|vav-8,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,60,Space Temperature Setpoint BAS|vav-8,72.504 °F,—,
+Analog Output,61,Occupied Standby Offset|vav-8,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,62,Unoccupied Cooling Setpoint|vav-8,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,63,Unoccupied Heating Setpoint|vav-8,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,64,Ventilation Setpoint BAS|vav-8,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,65,Minimum Flow Setpoint Multiplier BAS|vav-9,0.25,0.25 at Level 9: Unspecified,
+Analog Output,66,Source Temperature BAS|vav-9,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,67,Occupied Offset|vav-9,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,68,Space Temperature Setpoint BAS|vav-9,72.504 °F,—,
+Analog Output,69,Occupied Standby Offset|vav-9,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,70,Unoccupied Cooling Setpoint|vav-9,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,71,Unoccupied Heating Setpoint|vav-9,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,72,Ventilation Setpoint BAS|vav-9,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,73,Minimum Flow Setpoint Multiplier BAS|vav-10,1,—,
+Analog Output,74,Source Temperature BAS|vav-10,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,75,Occupied Offset|vav-10,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,76,Space Temperature Setpoint BAS|vav-10,72.504 °F,—,
+Analog Output,77,Occupied Standby Offset|vav-10,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,78,Unoccupied Cooling Setpoint|vav-10,84.995995 °F,—,
+Analog Output,79,Unoccupied Heating Setpoint|vav-10,60.01199 °F,—,
+Analog Output,80,Ventilation Setpoint BAS|vav-10,110 CFM (OutOfService),—,
+Analog Output,81,Minimum Flow Setpoint Multiplier BAS|vav-11,0.25,0.25 at Level 9: Unspecified,
+Analog Output,82,Source Temperature BAS|vav-11,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,83,Occupied Offset|vav-11,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,84,Space Temperature Setpoint BAS|vav-11,72.504 °F,—,
+Analog Output,85,Occupied Standby Offset|vav-11,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,86,Unoccupied Cooling Setpoint|vav-11,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,87,Unoccupied Heating Setpoint|vav-11,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,88,Ventilation Setpoint BAS|vav-11,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,89,Minimum Flow Setpoint Multiplier BAS|vav-12,1,1 at Level 9: Unspecified,
+Analog Output,90,Source Temperature BAS|vav-12,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,91,Occupied Offset|vav-12,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,92,Space Temperature Setpoint BAS|vav-12,74 °F,74 °F at Level 12: Unspecified,
+Analog Output,93,Occupied Standby Offset|vav-12,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,94,Unoccupied Cooling Setpoint|vav-12,75 °F,75 °F at Level 8: Manual Operator,
+Analog Output,95,Unoccupied Heating Setpoint|vav-12,73 °F,73 °F at Level 8: Manual Operator,
+Analog Output,96,Ventilation Setpoint BAS|vav-12,0 CFM,0 CFM at Level 5: Critical Equipment Control,
+Analog Output,97,Minimum Flow Setpoint Multiplier BAS|vav-13,1,—,
+Analog Output,98,Source Temperature BAS|vav-13,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,99,Occupied Offset|vav-13,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,100,Space Temperature Setpoint BAS|vav-13,72.504 °F,—,
+Analog Output,101,Occupied Standby Offset|vav-13,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,102,Unoccupied Cooling Setpoint|vav-13,80 °F,80 °F at Level 12: Unspecified,
+Analog Output,103,Unoccupied Heating Setpoint|vav-13,60.01199 °F,—,
+Analog Output,104,Ventilation Setpoint BAS|vav-13,110 CFM (OutOfService),—,
+Analog Output,105,Minimum Flow Setpoint Multiplier BAS|vav-14,1,—,
+Analog Output,106,Source Temperature BAS|vav-14,56.491478 °F,56.491478 °F at Level 10: Unspecified,
+Analog Output,107,Occupied Offset|vav-14,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,108,Space Temperature Setpoint BAS|vav-14,72.504 °F,—,
+Analog Output,109,Occupied Standby Offset|vav-14,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,110,Unoccupied Cooling Setpoint|vav-14,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,111,Unoccupied Heating Setpoint|vav-14,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,112,Ventilation Setpoint BAS|vav-14,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,113,Minimum Flow Setpoint Multiplier BAS|vav-15,1,—,
+Analog Output,114,Source Temperature BAS|vav-15,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,115,Occupied Offset|vav-15,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,116,Space Temperature Setpoint BAS|vav-15,72.504 °F,—,
+Analog Output,117,Occupied Standby Offset|vav-15,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,118,Unoccupied Cooling Setpoint|vav-15,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,119,Unoccupied Heating Setpoint|vav-15,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,120,Ventilation Setpoint BAS|vav-15,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,121,Minimum Flow Setpoint Multiplier BAS|vav-16,1,—,
+Analog Output,122,Source Temperature BAS|vav-16,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,123,Occupied Offset|vav-16,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,124,Space Temperature Setpoint BAS|vav-16,72.504 °F,—,
+Analog Output,125,Occupied Standby Offset|vav-16,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,126,Unoccupied Cooling Setpoint|vav-16,84.995995 °F,—,
+Analog Output,127,Unoccupied Heating Setpoint|vav-16,60.01199 °F,—,
+Analog Output,128,Ventilation Setpoint BAS|vav-16,110 CFM (OutOfService),—,
+Analog Output,129,Minimum Flow Setpoint Multiplier BAS|vav-17,0.25,0.25 at Level 9: Unspecified,
+Analog Output,130,Source Temperature BAS|vav-17,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,131,Occupied Offset|vav-17,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,132,Space Temperature Setpoint BAS|vav-17,73.5 °F,73.5 °F at Level 12: Unspecified,
+Analog Output,133,Occupied Standby Offset|vav-17,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,134,Unoccupied Cooling Setpoint|vav-17,74.5 °F,74.5 °F at Level 8: Manual Operator,
+Analog Output,135,Unoccupied Heating Setpoint|vav-17,72.5 °F,72.5 °F at Level 8: Manual Operator,
+Analog Output,136,Ventilation Setpoint BAS|vav-17,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,137,Minimum Flow Setpoint Multiplier BAS|vav-18,1,1 at Level 9: Unspecified,
+Analog Output,138,Source Temperature BAS|vav-18,56.749546 °F,56.749546 °F at Level 10: Unspecified,
+Analog Output,139,Occupied Offset|vav-18,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,140,Space Temperature Setpoint BAS|vav-18,72.504 °F,—,
+Analog Output,141,Occupied Standby Offset|vav-18,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,142,Unoccupied Cooling Setpoint|vav-18,73.5 °F,73.5 °F at Level 8: Manual Operator,
+Analog Output,143,Unoccupied Heating Setpoint|vav-18,71.5 °F,71.5 °F at Level 8: Manual Operator,
+Analog Output,144,Ventilation Setpoint BAS|vav-18,0 CFM (OutOfService),0 CFM at Level 5: Critical Equipment Control,
+Analog Output,145,Minimum Flow Setpoint Multiplier BAS|vav-19,1,—,
+Analog Output,146,Source Temperature BAS|vav-19,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,147,Occupied Offset|vav-19,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,148,Space Temperature Setpoint BAS|vav-19,72.504 °F,—,
+Analog Output,149,Occupied Standby Offset|vav-19,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,150,Unoccupied Cooling Setpoint|vav-19,84.995995 °F,—,
+Analog Output,151,Unoccupied Heating Setpoint|vav-19,60.01199 °F,—,
+Analog Output,152,Ventilation Setpoint BAS|vav-19,110 CFM (OutOfService),—,
+Analog Output,153,Minimum Flow Setpoint Multiplier BAS|vav-20,1,—,
+Analog Output,154,Source Temperature BAS|vav-20,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,155,Occupied Offset|vav-20,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,156,Space Temperature Setpoint BAS|vav-20,72.504 °F,—,
+Analog Output,157,Occupied Standby Offset|vav-20,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,158,Unoccupied Cooling Setpoint|vav-20,84.995995 °F,—,
+Analog Output,159,Unoccupied Heating Setpoint|vav-20,60.01199 °F,—,
+Analog Output,160,Ventilation Setpoint BAS|vav-20,30 CFM (OutOfService),—,
+Analog Output,161,Minimum Flow Setpoint Multiplier BAS|vav-21,1,—,
+Analog Output,162,Source Temperature BAS|vav-21,56.4054 °F,56.4054 °F at Level 10: Unspecified,
+Analog Output,163,Occupied Offset|vav-21,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,164,Space Temperature Setpoint BAS|vav-21,72.504 °F,—,
+Analog Output,165,Occupied Standby Offset|vav-21,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,166,Unoccupied Cooling Setpoint|vav-21,80.3 °F,80.3 °F at Level 8: Manual Operator,
+Analog Output,167,Unoccupied Heating Setpoint|vav-21,64.700005 °F,64.700005 °F at Level 8: Manual Operator,
+Analog Output,168,Ventilation Setpoint BAS|vav-21,110 CFM (OutOfService),—,
+Analog Output,169,Minimum Flow Setpoint Multiplier BAS|vav-22,1,—,
+Analog Output,170,Source Temperature BAS|vav-22,56.4054 °F,56.4054 °F at Level 10: Unspecified,
+Analog Output,171,Occupied Offset|vav-22,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,172,Space Temperature Setpoint BAS|vav-22,71.5 °F,71.5 °F at Level 12: Unspecified,
+Analog Output,173,Occupied Standby Offset|vav-22,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,174,Unoccupied Cooling Setpoint|vav-22,84.995995 °F,—,
+Analog Output,175,Unoccupied Heating Setpoint|vav-22,60.01199 °F,—,
+Analog Output,176,Ventilation Setpoint BAS|vav-22,110 CFM (OutOfService),—,
+Analog Output,177,Minimum Flow Setpoint Multiplier BAS|vav-23,1,—,
+Analog Output,178,Source Temperature BAS|vav-23,56.319374 °F,56.319374 °F at Level 10: Unspecified,
+Analog Output,179,Occupied Offset|vav-23,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,180,Space Temperature Setpoint BAS|vav-23,71.5 °F,71.5 °F at Level 12: Unspecified,
+Analog Output,181,Occupied Standby Offset|vav-23,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,182,Unoccupied Cooling Setpoint|vav-23,84.995995 °F,—,
+Analog Output,183,Unoccupied Heating Setpoint|vav-23,60.01199 °F,—,
+Analog Output,184,Ventilation Setpoint BAS|vav-23,30 CFM (OutOfService),—,
+Analog Output,185,Minimum Flow Setpoint Multiplier BAS|vav-24,1,—,
+Analog Output,186,Source Temperature BAS|vav-24,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,187,Occupied Offset|vav-24,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,188,Space Temperature Setpoint BAS|vav-24,70.504 °F,70.504 °F at Level 12: Unspecified,
+Analog Output,189,Occupied Standby Offset|vav-24,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,190,Unoccupied Cooling Setpoint|vav-24,78.5 °F,78.5 °F at Level 8: Manual Operator,
+Analog Output,191,Unoccupied Heating Setpoint|vav-24,62.5 °F,62.5 °F at Level 8: Manual Operator,
+Analog Output,192,Ventilation Setpoint BAS|vav-24,110 CFM (OutOfService),—,
+Analog Output,193,Minimum Flow Setpoint Multiplier BAS|vav-25,1,—,
+Analog Output,194,Source Temperature BAS|vav-25,56.4054 °F,56.4054 °F at Level 10: Unspecified,
+Analog Output,195,Occupied Offset|vav-25,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,196,Space Temperature Setpoint BAS|vav-25,71.5 °F,71.5 °F at Level 12: Unspecified,
+Analog Output,197,Occupied Standby Offset|vav-25,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,198,Unoccupied Cooling Setpoint|vav-25,79 °F,79 °F at Level 8: Manual Operator,
+Analog Output,199,Unoccupied Heating Setpoint|vav-25,64 °F,64 °F at Level 8: Manual Operator,
+Analog Output,200,Ventilation Setpoint BAS|vav-25,110 CFM (OutOfService),—,
+Analog Output,201,Minimum Flow Setpoint Multiplier BAS|vav-26,1,—,
+Analog Output,202,Source Temperature BAS|vav-26,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,203,Occupied Offset|vav-26,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,204,Space Temperature Setpoint BAS|vav-26,71.5 °F,71.5 °F at Level 12: Unspecified,
+Analog Output,205,Occupied Standby Offset|vav-26,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,206,Unoccupied Cooling Setpoint|vav-26,79.4 °F,79.4 °F at Level 8: Manual Operator,
+Analog Output,207,Unoccupied Heating Setpoint|vav-26,63.600002 °F,63.600002 °F at Level 8: Manual Operator,
+Analog Output,208,Ventilation Setpoint BAS|vav-26,110 CFM (OutOfService),—,
+Analog Output,209,Minimum Flow Setpoint Multiplier BAS|vav-27,1,—,
+Analog Output,210,Source Temperature BAS|vav-27,56.66352 °F,56.66352 °F at Level 10: Unspecified,
+Analog Output,211,Occupied Offset|vav-27,1 Δ°F,1 Δ°F at Level 12: Unspecified,
+Analog Output,212,Space Temperature Setpoint BAS|vav-27,70.5 °F,70.5 °F at Level 12: Unspecified,
+Analog Output,213,Occupied Standby Offset|vav-27,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,214,Unoccupied Cooling Setpoint|vav-27,78.5 °F,78.5 °F at Level 8: Manual Operator,
+Analog Output,215,Unoccupied Heating Setpoint|vav-27,62.5 °F,62.5 °F at Level 8: Manual Operator,
+Analog Output,216,Ventilation Setpoint BAS|vav-27,79 CFM (OutOfService),79 CFM at Level 12: Unspecified,
+Analog Output,217,Minimum Flow Setpoint Multiplier BAS|vav-28,1,—,
+Analog Output,218,Source Temperature BAS|vav-28,56.5775 °F,56.5775 °F at Level 10: Unspecified,
+Analog Output,219,Occupied Offset|vav-28,1 Δ°F,1 Δ°F at Level 13: Unspecified,
+Analog Output,220,Space Temperature Setpoint BAS|vav-28,71.5 °F,71.5 °F at Level 12: Unspecified,
+Analog Output,221,Occupied Standby Offset|vav-28,2.5 Δ°F,2.5 Δ°F at Level 12: Unspecified,
+Analog Output,222,Unoccupied Cooling Setpoint|vav-28,79.4 °F,79.4 °F at Level 8: Manual Operator,
+Analog Output,223,Unoccupied Heating Setpoint|vav-28,63.600002 °F,63.600002 °F at Level 8: Manual Operator,
+Analog Output,224,Ventilation Setpoint BAS|vav-28,30 CFM (OutOfService),—,
+Analog Output,225,spaceSetpoint|APEC Classrooms Area-1,72.504 °F,—,
+Analog Output,226,occupiedOffset|APEC Classrooms Area-1,2.4912 Δ°F,—,
+Analog Output,227,standbyOffset|APEC Classrooms Area-1,7.506 Δ°F,—,
+Analog Output,228,occupiedHumiditySetpoint|APEC Classrooms Area-1,50 %,—,
+Analog Output,229,unoccupiedHeatSetpoint|APEC Classrooms Area-1,60.012 °F,—,
+Analog Output,230,unoccupiedCoolSetpoint|APEC Classrooms Area-1,84.996 °F,—,
+Analog Output,231,unoccupiedHumidifyStartSetpoint|APEC Classrooms Area-1,20 %,—,
+Analog Output,232,unoccupiedHumidifyStopSetpoint|APEC Classrooms Area-1,25 %,—,
+Analog Output,233,unoccupiedDehumidifyStartSetpoint|APEC Classrooms Area-1,60 %,—,
+Analog Output,234,unoccupiedDehumidifyStopSetpoint|APEC Classrooms Area-1,55 %,—,
+Analog Output,235,deltaTemperature|APEC Classrooms Area-1,15 Δ°F,—,
+Analog Output,236,outdoorAirHumidity|APEC Classrooms Area-1,85.28802 %,85.28802 % at Level 12: Unspecified,
+Analog Output,237,spaceHumidity|APEC Classrooms Area-1,40 %,—,
+Analog Output,238,spaceSensor|APEC Classrooms Area-1,70.2 °F,70.2 °F at Level 12: Unspecified,
+Analog Output,239,outdoorSensor|APEC Classrooms Area-1,77.01798 °F,77.01798 °F at Level 12: Unspecified,
+Analog Output,240,occupiedDifference|APEC Classrooms Area-1,1.008 Δ°F,—,
+Analog Output,241,unoccupiedDifference|APEC Classrooms Area-1,3.996 Δ°F,—,
+Analog Output,242,timedOverrideDuration|APEC Classrooms Area-1,120,—,
+Analog Output,243,economizerEnableFixedDryBulb|APEC Classrooms Area-1,60 °F,—,
+Analog Output,244,economizerDisableFixedDryBulb|APEC Classrooms Area-1,65 °F,—,
+Analog Output,245,economizerEnableDifferentialDryBulb|APEC Classrooms Area-1,15 Δ°F,—,
+Analog Output,246,economizerDisableDifferentialDryBulb|APEC Classrooms Area-1,10 Δ°F,—,
+Analog Output,247,economizerEnableFixedEnthalpy|APEC Classrooms Area-1,26 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,248,economizerDisableFixedEnthalpy|APEC Classrooms Area-1,28 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,249,economizerEnableDifferentialEnthalpy|APEC Classrooms Area-1,4 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,250,economizerDisableDifferentialEnthalpy|APEC Classrooms Area-1,3 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,251,economizerEnableFixedDewPoint|APEC Classrooms Area-1,53 °F,—,
+Analog Output,252,economizerDisableFixedDewPoint|APEC Classrooms Area-1,55 °F,—,
+Analog Output,253,spaceSetpoint|APEC Offices Area-2,72.504 °F,—,
+Analog Output,254,occupiedOffset|APEC Offices Area-2,2.4912 Δ°F,—,
+Analog Output,255,standbyOffset|APEC Offices Area-2,7.506 Δ°F,—,
+Analog Output,256,occupiedHumiditySetpoint|APEC Offices Area-2,50 %,—,
+Analog Output,257,unoccupiedHeatSetpoint|APEC Offices Area-2,60.012 °F,—,
+Analog Output,258,unoccupiedCoolSetpoint|APEC Offices Area-2,84.996 °F,—,
+Analog Output,259,unoccupiedHumidifyStartSetpoint|APEC Offices Area-2,20 %,—,
+Analog Output,260,unoccupiedHumidifyStopSetpoint|APEC Offices Area-2,25 %,—,
+Analog Output,261,unoccupiedDehumidifyStartSetpoint|APEC Offices Area-2,60 %,—,
+Analog Output,262,unoccupiedDehumidifyStopSetpoint|APEC Offices Area-2,55 %,—,
+Analog Output,263,deltaTemperature|APEC Offices Area-2,15 Δ°F,—,
+Analog Output,264,outdoorAirHumidity|APEC Offices Area-2,85.28802 %,85.28802 % at Level 12: Unspecified,
+Analog Output,265,spaceHumidity|APEC Offices Area-2,40 %,—,
+Analog Output,266,spaceSensor|APEC Offices Area-2,76.7 °F,76.7 °F at Level 12: Unspecified,
+Analog Output,267,outdoorSensor|APEC Offices Area-2,77.01798 °F,77.01798 °F at Level 12: Unspecified,
+Analog Output,268,occupiedDifference|APEC Offices Area-2,1.008 Δ°F,—,
+Analog Output,269,unoccupiedDifference|APEC Offices Area-2,3.996 Δ°F,—,
+Analog Output,270,timedOverrideDuration|APEC Offices Area-2,120,—,
+Analog Output,271,economizerEnableFixedDryBulb|APEC Offices Area-2,60 °F,—,
+Analog Output,272,economizerDisableFixedDryBulb|APEC Offices Area-2,65 °F,—,
+Analog Output,273,economizerEnableDifferentialDryBulb|APEC Offices Area-2,15 Δ°F,—,
+Analog Output,274,economizerDisableDifferentialDryBulb|APEC Offices Area-2,10 Δ°F,—,
+Analog Output,275,economizerEnableFixedEnthalpy|APEC Offices Area-2,26 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,276,economizerDisableFixedEnthalpy|APEC Offices Area-2,28 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,277,economizerEnableDifferentialEnthalpy|APEC Offices Area-2,4 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,278,economizerDisableDifferentialEnthalpy|APEC Offices Area-2,3 BTUS_PER_POUND_DRY_AIR,—,
+Analog Output,279,economizerEnableFixedDewPoint|APEC Offices Area-2,53 °F,—,
+Analog Output,280,economizerDisableFixedDewPoint|APEC Offices Area-2,55 °F,—,
+Analog Output,281,ventRatioLimitAhu|VPEC AHU-1E VAS-1,40,—,
+Analog Output,282,ventRatioLimitVav|VPEC AHU-1E VAS-1,60,—,
+Analog Value,1,ductPressOptSetptRequest|VPEC AHU-1E VAS-1,2 WC,2 WC at Level 10: Unspecified,
+Analog Value,2,ventOptOaSetpointCorrected|VPEC AHU-1E VAS-1,0 CFM,0 CFM at Level 10: Unspecified,
+Analog Value,3,Disch Temp Stpt SC102,57 °F,57 °F at Level 16: Lowest,
+Analog Value,4,Outdoor Air Temperature BAS Into SC102,77.01798 °F,77.01798 °F at Level 16: Lowest,"Written to by Ensemble Global Point, value from CASL C106"
+Analog Value,5,Outdoor Air Humidity BAS Into SC102,85.28802 %,85.28802 % at Level 16: Lowest,"Written to by Ensemble Global Point, value from CASL C106"
+Analog Value,6,CASL CH-1 Running Capacity,0 %,—,
+Analog Value,7,CASL CH-2 Running Capacity,95.5 %,95.5 % at Level 5: Critical Equipment Control,
+Analog Value,8,EC Add Chiller Amp Draw,34 AMPERES,34 AMPERES at Level 16: Lowest,
+Analog Value,9,EC Chiller Amp Draw,31 AMPERES,31 AMPERES at Level 16: Lowest,
+Analog Value,10,SSB Chiller Amp Draw,0 AMPERES,0 AMPERES at Level 5: Critical Equipment Control,
+Analog Value,11,LLRC Master Load KW,453.5093 KILOWATTS,453.5093 KILOWATTS at Level 5: Critical Equipment Control,
+Analog Value,12,LLRC Slave Load KW,2267.546 KILOWATTS,2267.546 KILOWATTS at Level 5: Critical Equipment Control,
+Analog Value,13,Fieldhouse Load KW,0 KILOWATTS,0 KILOWATTS at Level 5: Critical Equipment Control,
+Analog Value,14,Demand Limit Change Percentage BAS,10.1 %,—,
+Analog Value,15,Demand Limit 1st Stage Stpt BAS,5700 KILOWATTS,5700 KILOWATTS at Level 13: Unspecified,
+Analog Value,16,Demand Limit 2nd Stage Stpt BAS,5800 KILOWATTS,5800 KILOWATTS at Level 13: Unspecified,
+Analog Value,17,Demand Limit 3rd Stage Stpt BAS,6000 KILOWATTS,6000 KILOWATTS at Level 13: Unspecified,
+Analog Value,18,CASL CH-1 Calc Demand,100,100 at Level 9: Unspecified,
+Analog Value,19,CASL CH-2 Calc Demand,100,100 at Level 9: Unspecified,
+Analog Value,20,CASL CH-1 Demand Signal,100 %,100 % at Level 9: Unspecified,
+Analog Value,21,CASL CH-2 Demand Signal,100 %,100 % at Level 9: Unspecified,
+Analog Value,22,CASL Divide By Pct,0 %,—,
+Analog Value,23,Eng CH-1 Calc Demand,100,100 at Level 9: Unspecified,
+Analog Value,24,Eng Add CH-2 Calc Demand,100,100 at Level 9: Unspecified,
+Analog Value,25,Eng CH-1 Demand Signal,100 %,100 % at Level 9: Unspecified,
+Analog Value,26,Eng Add CH-2 Demand Signal,100 %,100 % at Level 9: Unspecified,
+Analog Value,27,SSB CH-1 Demand Signal,100 %,100 % at Level 9: Unspecified,
+Analog Value,28,SSB CH-1 Calc Demand,100,100 at Level 9: Unspecified,
+Analog Value,29,Demand Current Total,3621.0557 KILOWATTS,3621.0557 KILOWATTS at Level 9: Unspecified,Demand total value from energy program
+Analog Value,30,Demand RTU_AHU DAT Stpt Request,57 °F,—,
+Analog Value,31,Demand RTU_AHU DAT Change Stpt,5 °F,—,
+Analog Value,32,Demand RTU_AHU DAT Stpt Active,57 °F,57 °F at Level 9: Unspecified,
+Analog Value,33,DC1 Timer,0,0 at Level 9: Unspecified,
+Analog Value,34,DC2 Timer,0,0 at Level 9: Unspecified,
+Analog Value,35,DC3 Timer,0,0 at Level 9: Unspecified,
+Analog Value,36,Demand Call-1 Timer,60,60 at Level 9: Unspecified,
+Analog Value,37,Demand Call-2 Timer,60,60 at Level 9: Unspecified,
+Analog Value,38,Demand Call-3 Timer,60,60 at Level 9: Unspecified,
+Analog Value,39,LLRC Slave Load KW Active,2267.5464 KILOWATTS,2267.5464 KILOWATTS at Level 9: Unspecified,
+Analog Value,40,LLRC Master Load KW Active,453.5093 KILOWATTS,453.5093 KILOWATTS at Level 9: Unspecified,
+Analog Value,41,Fieldhouse Load KW Active,900 KILOWATTS,900 KILOWATTS at Level 9: Unspecified,
+Analog Value,42,Outdoor Air Enthalpy Active,37.165276 BTUS_PER_POUND_DRY_AIR,37.165276 BTUS_PER_POUND_DRY_AIR at Level 9: Unspecified,
+Binary Input,1,Air Valve Control Action Active|vav-1,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,2,Air Valve Position Control|vav-1,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,3,Occupancy Input|vav-1,[0] Occupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,4,Timed Override Timer Is Active|vav-1,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,5,Diagnostic Present|vav-1,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,6,Diagnostic Present: Advisory|vav-1,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,7,Diagnostic Present: Critical|vav-1,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,8,Diagnostic Present: Information|vav-1,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,9,Diagnostic Present: Service Required|vav-1,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,10,Air Valve Control Action Active|vav-2,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,11,Air Valve Position Control|vav-2,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,13,Timed Override Timer Is Active|vav-2,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,14,Diagnostic Present|vav-2,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,15,Diagnostic Present: Advisory|vav-2,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,16,Diagnostic Present: Critical|vav-2,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,17,Diagnostic Present: Information|vav-2,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,18,Diagnostic Present: Service Required|vav-2,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,19,Air Valve Control Action Active|vav-3,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,20,Air Valve Position Control|vav-3,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,21,Timed Override Timer Is Active|vav-3,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,22,Diagnostic Present|vav-3,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,23,Diagnostic Present: Advisory|vav-3,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,24,Diagnostic Present: Critical|vav-3,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,25,Diagnostic Present: Information|vav-3,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,26,Diagnostic Present: Service Required|vav-3,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,27,Air Valve Control Action Active|vav-4,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,28,Air Valve Position Control|vav-4,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,29,Timed Override Timer Is Active|vav-4,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,30,Diagnostic Present|vav-4,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,31,Diagnostic Present: Advisory|vav-4,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,32,Diagnostic Present: Critical|vav-4,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,33,Diagnostic Present: Information|vav-4,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,34,Diagnostic Present: Service Required|vav-4,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,35,Air Valve Control Action Active|vav-5,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,36,Air Valve Position Control|vav-5,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,38,Timed Override Timer Is Active|vav-5,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,39,Diagnostic Present|vav-5,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,40,Diagnostic Present: Advisory|vav-5,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,41,Diagnostic Present: Critical|vav-5,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,42,Diagnostic Present: Information|vav-5,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,43,Diagnostic Present: Service Required|vav-5,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,44,Air Valve Control Action Active|vav-6,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,45,Air Valve Position Control|vav-6,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,46,Timed Override Timer Is Active|vav-6,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,47,Diagnostic Present|vav-6,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,48,Diagnostic Present: Advisory|vav-6,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,49,Diagnostic Present: Critical|vav-6,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,50,Diagnostic Present: Information|vav-6,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,51,Diagnostic Present: Service Required|vav-6,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,52,Air Valve Control Action Active|vav-7,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,53,Air Valve Position Control|vav-7,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,54,Occupancy Input|vav-7,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,55,Timed Override Timer Is Active|vav-7,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,56,Diagnostic Present|vav-7,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,57,Diagnostic Present: Advisory|vav-7,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,58,Diagnostic Present: Critical|vav-7,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,59,Diagnostic Present: Information|vav-7,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,60,Diagnostic Present: Service Required|vav-7,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,61,Air Valve Control Action Active|vav-8,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,62,Air Valve Position Control|vav-8,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,63,Occupancy Input|vav-8,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,64,Timed Override Timer Is Active|vav-8,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,65,Diagnostic Present|vav-8,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,66,Diagnostic Present: Advisory|vav-8,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,67,Diagnostic Present: Critical|vav-8,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,68,Diagnostic Present: Information|vav-8,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,69,Diagnostic Present: Service Required|vav-8,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,70,Air Valve Control Action Active|vav-9,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,71,Air Valve Position Control|vav-9,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,72,Occupancy Input|vav-9,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,73,Timed Override Timer Is Active|vav-9,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,74,Diagnostic Present|vav-9,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,75,Diagnostic Present: Advisory|vav-9,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,76,Diagnostic Present: Critical|vav-9,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,77,Diagnostic Present: Information|vav-9,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,78,Diagnostic Present: Service Required|vav-9,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,79,Air Valve Control Action Active|vav-10,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,80,Air Valve Position Control|vav-10,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,81,Timed Override Timer Is Active|vav-10,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,82,Diagnostic Present|vav-10,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,83,Diagnostic Present: Advisory|vav-10,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,84,Diagnostic Present: Critical|vav-10,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,85,Diagnostic Present: Information|vav-10,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,86,Diagnostic Present: Service Required|vav-10,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,87,Air Valve Control Action Active|vav-11,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,88,Air Valve Position Control|vav-11,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,89,Occupancy Input|vav-11,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,90,Timed Override Timer Is Active|vav-11,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,91,Diagnostic Present|vav-11,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,92,Diagnostic Present: Advisory|vav-11,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,93,Diagnostic Present: Critical|vav-11,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,94,Diagnostic Present: Information|vav-11,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,95,Diagnostic Present: Service Required|vav-11,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,96,Air Valve Control Action Active|vav-12,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,97,Air Valve Position Control|vav-12,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,98,Occupancy Input|vav-12,[0] Occupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,99,Timed Override Timer Is Active|vav-12,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,100,Diagnostic Present|vav-12,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,101,Diagnostic Present: Advisory|vav-12,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,102,Diagnostic Present: Critical|vav-12,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,103,Diagnostic Present: Information|vav-12,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,104,Diagnostic Present: Service Required|vav-12,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,105,Air Valve Control Action Active|vav-13,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,106,Air Valve Position Control|vav-13,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,107,Timed Override Timer Is Active|vav-13,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,108,Diagnostic Present|vav-13,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,109,Diagnostic Present: Advisory|vav-13,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,110,Diagnostic Present: Critical|vav-13,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,111,Diagnostic Present: Information|vav-13,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,112,Diagnostic Present: Service Required|vav-13,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,113,Air Valve Control Action Active|vav-14,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,114,Air Valve Position Control|vav-14,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,115,Timed Override Timer Is Active|vav-14,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,116,Diagnostic Present|vav-14,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,117,Diagnostic Present: Advisory|vav-14,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,118,Diagnostic Present: Critical|vav-14,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,119,Diagnostic Present: Information|vav-14,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,120,Diagnostic Present: Service Required|vav-14,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,121,Air Valve Control Action Active|vav-15,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,122,Air Valve Position Control|vav-15,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,123,Timed Override Timer Is Active|vav-15,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,124,Diagnostic Present|vav-15,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,125,Diagnostic Present: Advisory|vav-15,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,126,Diagnostic Present: Critical|vav-15,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,127,Diagnostic Present: Information|vav-15,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,128,Diagnostic Present: Service Required|vav-15,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,129,Air Valve Control Action Active|vav-16,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,130,Air Valve Position Control|vav-16,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,131,Timed Override Timer Is Active|vav-16,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,132,Diagnostic Present|vav-16,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,133,Diagnostic Present: Advisory|vav-16,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,134,Diagnostic Present: Critical|vav-16,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,135,Diagnostic Present: Information|vav-16,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,136,Diagnostic Present: Service Required|vav-16,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,137,Air Valve Control Action Active|vav-17,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,138,Air Valve Position Control|vav-17,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,139,Occupancy Input|vav-17,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,140,Timed Override Timer Is Active|vav-17,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,141,Diagnostic Present|vav-17,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,142,Diagnostic Present: Advisory|vav-17,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,143,Diagnostic Present: Critical|vav-17,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,144,Diagnostic Present: Information|vav-17,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,145,Diagnostic Present: Service Required|vav-17,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,146,Air Valve Control Action Active|vav-18,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,147,Air Valve Position Control|vav-18,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,149,Timed Override Timer Is Active|vav-18,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,150,Diagnostic Present|vav-18,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,151,Diagnostic Present: Advisory|vav-18,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,152,Diagnostic Present: Critical|vav-18,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,153,Diagnostic Present: Information|vav-18,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,154,Diagnostic Present: Service Required|vav-18,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,155,Air Valve Control Action Active|vav-19,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,156,Air Valve Position Control|vav-19,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,157,Timed Override Timer Is Active|vav-19,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,158,Diagnostic Present|vav-19,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,159,Diagnostic Present: Advisory|vav-19,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,160,Diagnostic Present: Critical|vav-19,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,161,Diagnostic Present: Information|vav-19,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,162,Diagnostic Present: Service Required|vav-19,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,163,Air Valve Control Action Active|vav-20,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,164,Air Valve Position Control|vav-20,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,165,Timed Override Timer Is Active|vav-20,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,166,Diagnostic Present|vav-20,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,167,Diagnostic Present: Advisory|vav-20,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,168,Diagnostic Present: Critical|vav-20,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,169,Diagnostic Present: Information|vav-20,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,170,Diagnostic Present: Service Required|vav-20,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,171,Air Valve Control Action Active|vav-21,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,172,Air Valve Position Control|vav-21,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,173,Timed Override Timer Is Active|vav-21,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,174,Diagnostic Present|vav-21,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,175,Diagnostic Present: Advisory|vav-21,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,176,Diagnostic Present: Critical|vav-21,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,177,Diagnostic Present: Information|vav-21,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,178,Diagnostic Present: Service Required|vav-21,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,179,Air Valve Control Action Active|vav-22,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,180,Air Valve Position Control|vav-22,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,181,Timed Override Timer Is Active|vav-22,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,182,Diagnostic Present|vav-22,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,183,Diagnostic Present: Advisory|vav-22,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,184,Diagnostic Present: Critical|vav-22,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,185,Diagnostic Present: Information|vav-22,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,186,Diagnostic Present: Service Required|vav-22,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,187,Air Valve Control Action Active|vav-23,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,188,Air Valve Position Control|vav-23,[0] pressure independent control,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,189,Timed Override Timer Is Active|vav-23,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,190,Diagnostic Present|vav-23,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,191,Diagnostic Present: Advisory|vav-23,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,192,Diagnostic Present: Critical|vav-23,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,193,Diagnostic Present: Information|vav-23,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,194,Diagnostic Present: Service Required|vav-23,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,195,Air Valve Control Action Active|vav-24,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,196,Air Valve Position Control|vav-24,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,197,Timed Override Timer Is Active|vav-24,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,198,Diagnostic Present|vav-24,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,199,Diagnostic Present: Advisory|vav-24,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,200,Diagnostic Present: Critical|vav-24,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,201,Diagnostic Present: Information|vav-24,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,202,Diagnostic Present: Service Required|vav-24,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,203,Air Valve Control Action Active|vav-25,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,204,Air Valve Position Control|vav-25,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,205,Timed Override Timer Is Active|vav-25,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,206,Diagnostic Present|vav-25,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,207,Diagnostic Present: Advisory|vav-25,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,208,Diagnostic Present: Critical|vav-25,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,209,Diagnostic Present: Information|vav-25,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,210,Diagnostic Present: Service Required|vav-25,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,211,Air Valve Control Action Active|vav-26,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,212,Air Valve Position Control|vav-26,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,213,Timed Override Timer Is Active|vav-26,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,214,Diagnostic Present|vav-26,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,215,Diagnostic Present: Advisory|vav-26,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,216,Diagnostic Present: Critical|vav-26,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,217,Diagnostic Present: Information|vav-26,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,218,Diagnostic Present: Service Required|vav-26,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,219,Air Valve Control Action Active|vav-27,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,220,Air Valve Position Control|vav-27,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,221,Timed Override Timer Is Active|vav-27,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,222,Diagnostic Present|vav-27,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,223,Diagnostic Present: Advisory|vav-27,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,224,Diagnostic Present: Critical|vav-27,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,225,Diagnostic Present: Information|vav-27,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,226,Diagnostic Present: Service Required|vav-27,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,227,Air Valve Control Action Active|vav-28,[1] Cooling,,"[0]=Heating, [1]=Cooling"
+Binary Input,228,Air Valve Position Control|vav-28,[1] position control / pressure dependent,,"[0]=pressure independent control, [1]=position control / pressure dependent"
+Binary Input,229,Timed Override Timer Is Active|vav-28,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,230,Diagnostic Present|vav-28,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,231,Diagnostic Present: Advisory|vav-28,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,232,Diagnostic Present: Critical|vav-28,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,233,Diagnostic Present: Information|vav-28,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,234,Diagnostic Present: Service Required|vav-28,[0] Normal,,"[0]=Normal, [1]=In Alarm"
+Binary Input,235,economizeEnabled|APEC Classrooms Area-1,[0] Disable,,"[0]=Disable, [1]=Enable"
+Binary Input,236,timedOverrideActive|APEC Classrooms Area-1,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,237,diagCalculation|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,238,diagHeatCoolRequestFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,239,diagUnoccHeatCoolFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,240,diagOptimalStartStopFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,241,diagTimedOverrideFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,242,diagBinaryControlFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,243,diagEconomizingFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,244,diagNightPurgeFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,245,diagUnoccDehumidifyFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,246,diagHumidityPullDownFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,247,diagUnoccHumidifyFunc|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,248,diagnosticAlarmPresent|APEC Classrooms Area-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,249,economizeEnabled|APEC Offices Area-2,[0] Disable,,"[0]=Disable, [1]=Enable"
+Binary Input,250,timedOverrideActive|APEC Offices Area-2,[0] Inactive,,"[0]=Inactive, [1]=Active"
+Binary Input,251,diagCalculation|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,252,diagHeatCoolRequestFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,253,diagUnoccHeatCoolFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,254,diagOptimalStartStopFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,255,diagTimedOverrideFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,256,diagBinaryControlFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,257,diagEconomizingFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,258,diagNightPurgeFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,259,diagUnoccDehumidifyFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,260,diagHumidityPullDownFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,261,diagUnoccHumidifyFunc|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,262,diagnosticAlarmPresent|APEC Offices Area-2,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,263,changeoverEnable|VPEC AHU-1E VAS-1,[0] Disabled,,"[0]=Disabled, [1]=Enabled"
+Binary Input,264,diagVasInUnknownMode|VPEC AHU-1E VAS-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,265,diagVasUnableToDriveMax|VPEC AHU-1E VAS-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,266,diagVasSourceTempFailure|VPEC AHU-1E VAS-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,267,diagVasSystemFailure|VPEC AHU-1E VAS-1,[0] Normal,,"[0]=Normal, [1]=Alarm"
+Binary Input,268,PEC Radiant Panels,[1] Locked Out,,"Note Polarity is Reversed On This Point: [0]=Active, [1]=Locked Out"
+Binary Input,269,AHU-1E TOV Timer Is Active,[0] Off,,"[0]=Off, [1]=On"
+Binary Input,272,Occupancy Input|vav-13,[0] Occupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,273,Occupancy Input|vav-18,[1] Unoccupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,274,Occupancy Input|vav-2,[0] Occupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Input,275,Occupancy Input|vav-5,[0] Occupied,,"[0]=Occupied, [1]=Unoccupied"
+Binary Output,1,Air Valve Control Action BAS|vav-1,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,2,Heat Lockout Command|vav-1,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,3,Supply Fan Lockout Command|vav-1,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,4,Air Valve Control Action BAS|vav-2,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,5,Heat Lockout Command|vav-2,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,6,Supply Fan Lockout Command|vav-2,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,7,Air Valve Control Action BAS|vav-3,[1] Cooling,—,"[0]=Heating, [1]=Cooling"
+Binary Output,8,Heat Lockout Command|vav-3,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,9,Supply Fan Lockout Command|vav-3,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,10,Air Valve Control Action BAS|vav-4,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,11,Heat Lockout Command|vav-4,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,12,Air Valve Control Action BAS|vav-5,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,13,Heat Lockout Command|vav-5,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,14,Air Valve Control Action BAS|vav-6,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,15,Heat Lockout Command|vav-6,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,16,Supply Fan Lockout Command|vav-6,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,17,Air Valve Control Action BAS|vav-7,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,18,Heat Lockout Command|vav-7,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,19,Supply Fan Lockout Command|vav-7,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,20,Air Valve Control Action BAS|vav-8,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,21,Heat Lockout Command|vav-8,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,22,Supply Fan Lockout Command|vav-8,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,23,Air Valve Control Action BAS|vav-9,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,24,Heat Lockout Command|vav-9,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,25,Supply Fan Lockout Command|vav-9,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,26,Air Valve Control Action BAS|vav-10,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,27,Heat Lockout Command|vav-10,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,28,Supply Fan Lockout Command|vav-10,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,29,Air Valve Control Action BAS|vav-11,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,30,Heat Lockout Command|vav-11,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,31,Supply Fan Lockout Command|vav-11,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,32,Air Valve Control Action BAS|vav-12,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,33,Heat Lockout Command|vav-12,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,34,Supply Fan Lockout Command|vav-12,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,35,Air Valve Control Action BAS|vav-13,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,36,Heat Lockout Command|vav-13,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,37,Air Valve Control Action BAS|vav-14,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,38,Heat Lockout Command|vav-14,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,39,Air Valve Control Action BAS|vav-15,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,40,Heat Lockout Command|vav-15,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,41,Supply Fan Lockout Command|vav-15,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,42,Air Valve Control Action BAS|vav-16,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,43,Heat Lockout Command|vav-16,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,44,Air Valve Control Action BAS|vav-17,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,45,Heat Lockout Command|vav-17,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,46,Supply Fan Lockout Command|vav-17,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,47,Air Valve Control Action BAS|vav-18,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,48,Heat Lockout Command|vav-18,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,49,Supply Fan Lockout Command|vav-18,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,50,Air Valve Control Action BAS|vav-19,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,51,Heat Lockout Command|vav-19,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,52,Air Valve Control Action BAS|vav-20,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,53,Heat Lockout Command|vav-20,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,54,Air Valve Control Action BAS|vav-21,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,55,Heat Lockout Command|vav-21,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,56,Supply Fan Lockout Command|vav-21,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,57,Air Valve Control Action BAS|vav-22,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,58,Heat Lockout Command|vav-22,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,59,Air Valve Control Action BAS|vav-23,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,60,Heat Lockout Command|vav-23,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,61,Supply Fan Lockout Command|vav-23,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,62,Air Valve Control Action BAS|vav-24,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,63,Heat Lockout Command|vav-24,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,64,Supply Fan Lockout Command|vav-24,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,65,Air Valve Control Action BAS|vav-25,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,66,Heat Lockout Command|vav-25,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,67,Supply Fan Lockout Command|vav-25,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,68,Air Valve Control Action BAS|vav-26,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,69,Heat Lockout Command|vav-26,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,70,Supply Fan Lockout Command|vav-26,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,71,Air Valve Control Action BAS|vav-27,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,72,Heat Lockout Command|vav-27,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,73,Supply Fan Lockout Command|vav-27,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,74,Air Valve Control Action BAS|vav-28,[1] Cooling (OutOfService),—,"[0]=Heating, [1]=Cooling"
+Binary Output,75,Heat Lockout Command|vav-28,[0] Normal (OutOfService),—,"[0]=Normal, [1]=Locked out"
+Binary Output,76,Supply Fan Lockout Command|vav-28,[1] Locked out,[1] Locked out at Level 16: Lowest,"[0]=Normal, [1]=Locked out"
+Binary Output,77,nightEconomize|APEC Classrooms Area-1,[0] disabled,—,"[0]=disabled, [1]=enabled"
+Binary Output,78,remoteEconomizeControl|APEC Classrooms Area-1,[0] disabled,—,"[0]=disabled, [1]=enabled"
+Binary Output,79,nightEconomize|APEC Offices Area-2,[0] disabled,—,"[0]=disabled, [1]=enabled"
+Binary Output,80,remoteEconomizeControl|APEC Offices Area-2,[0] disabled,—,"[0]=disabled, [1]=enabled"
+Binary Output,81,calibrateInitiate|VPEC AHU-1E VAS-1,[0] Normal,[0] Normal at Level 16: Lowest,"[0]=Normal, [1]=Recalibrate"
+Binary Output,82,Exhaust Fan 2E Request BAS,[1] On,[1] On at Level 12: Unspecified,"[0]=Off, [1]=On"
+Binary Output,83,Supply Fan Lockout Command|vav-13,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,84,Supply Fan Lockout Command|vav-14,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,85,Supply Fan Lockout Command|vav-16,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,86,Supply Fan Lockout Command|vav-19,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,87,Supply Fan Lockout Command|vav-20,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,88,Supply Fan Lockout Command|vav-22,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,89,Supply Fan Lockout Command|vav-4,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Output,90,Supply Fan Lockout Command|vav-5,[0] Normal,—,"[0]=Normal, [1]=Locked out"
+Binary Value,1,OA Disch Reset Request Into SC102,[0] Off,[0] Off at Level 16: Lowest,"[0]=Off, [1]=On"
+Binary Value,2,PEC Radiant Panels From SC104,[1] Lockout,[1] Lockout at Level 16: Lowest,"[0]=Active, [1]=Lockout"
+Binary Value,3,SC012 Pager Test,[0] Go Fishing,—,"[0]=Go Fishing, [1]=Go Hunting"
+Binary Value,4,Demand Limit Stage-1 Call,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,5,Demand Limit Stage-2 Call,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,6,Demand Limit Stage-3 Call,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,7,Calibrate VAVs AHU-1E,[0] Normal,—,"[0]=Normal, [1]=Calibrate"
+Binary Value,8,Demand Call-1 Timing Down,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,9,Demand Call-2 Timing Down,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,10,Demand Call-3 Timing Down,[0] Off,[0] Off at Level 9: Unspecified,"[0]=Off, [1]=On"
+Binary Value,11,Diagnostic LLRC Master Meter Failed,[0] Normal,[0] Normal at Level 9: Unspecified,"[0]=Normal, [1]=In Alarm"
+Binary Value,12,Diagnostic LLRC Slave Meter Failed,[0] Normal,[0] Normal at Level 9: Unspecified,"[0]=Normal, [1]=In Alarm"
+Binary Value,13,Diagnostic Fieldhouse Meter Failed,[1] In Alarm (InAlarm),[1] In Alarm at Level 9: Unspecified,"[0]=Normal, [1]=In Alarm"
+Binary Value,14,Standby Mode Disabled,[0] Auto,—,"[0]=Auto, [1]=Locked Out"
+Multi State Input,1,Communication Status|dac-1,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,2,Communication Status|ahu-1,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,3,Communication Status|vav-1,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,4,Heat Cool Mode Status|vav-1,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,5,Occupancy Status|vav-1,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,6,Secondary Communication Status|vav-1,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,7,Timed Override Status|vav-1,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,8,Communication Status|vav-2,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,9,Heat Cool Mode Status|vav-2,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,10,Occupancy Status|vav-2,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,11,Secondary Communication Status|vav-2,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,12,Timed Override Status|vav-2,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,13,Communication Status|vav-3,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,14,Heat Cool Mode Status|vav-3,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,15,Occupancy Status|vav-3,[4] Occupied Standby (OutOfService),,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,16,Secondary Communication Status|vav-3,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,17,Timed Override Status|vav-3,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,18,Communication Status|vav-4,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,19,Heat Cool Mode Status|vav-4,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,20,Occupancy Status|vav-4,[4] Occupied Standby,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,21,Secondary Communication Status|vav-4,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,22,Timed Override Status|vav-4,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,23,Communication Status|vav-5,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,24,Heat Cool Mode Status|vav-5,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,25,Occupancy Status|vav-5,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,26,Secondary Communication Status|vav-5,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,27,Timed Override Status|vav-5,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,28,Communication Status|vav-6,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,29,Heat Cool Mode Status|vav-6,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,30,Occupancy Status|vav-6,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,31,Secondary Communication Status|vav-6,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,32,Timed Override Status|vav-6,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,33,Communication Status|vav-7,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,34,Heat Cool Mode Status|vav-7,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,35,Occupancy Status|vav-7,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,36,Secondary Communication Status|vav-7,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,37,Timed Override Status|vav-7,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,38,Communication Status|vav-8,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,39,Heat Cool Mode Status|vav-8,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,40,Occupancy Status|vav-8,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,41,Secondary Communication Status|vav-8,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,42,Timed Override Status|vav-8,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,43,Communication Status|vav-9,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,44,Heat Cool Mode Status|vav-9,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,45,Occupancy Status|vav-9,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,46,Secondary Communication Status|vav-9,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,47,Timed Override Status|vav-9,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,48,Communication Status|vav-10,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,49,Heat Cool Mode Status|vav-10,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,50,Occupancy Status|vav-10,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,51,Secondary Communication Status|vav-10,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,52,Timed Override Status|vav-10,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,53,Communication Status|vav-11,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,54,Heat Cool Mode Status|vav-11,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,55,Occupancy Status|vav-11,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,56,Secondary Communication Status|vav-11,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,57,Timed Override Status|vav-11,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,58,Communication Status|vav-12,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,59,Heat Cool Mode Status|vav-12,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,60,Occupancy Status|vav-12,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,61,Secondary Communication Status|vav-12,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,62,Timed Override Status|vav-12,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,63,Communication Status|vav-13,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,64,Heat Cool Mode Status|vav-13,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,65,Occupancy Status|vav-13,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,66,Secondary Communication Status|vav-13,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,67,Timed Override Status|vav-13,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,68,Communication Status|vav-14,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,69,Heat Cool Mode Status|vav-14,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,70,Occupancy Status|vav-14,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,71,Secondary Communication Status|vav-14,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,72,Timed Override Status|vav-14,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,73,Communication Status|vav-15,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,74,Heat Cool Mode Status|vav-15,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,75,Occupancy Status|vav-15,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,76,Secondary Communication Status|vav-15,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,77,Timed Override Status|vav-15,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,78,Communication Status|vav-16,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,79,Heat Cool Mode Status|vav-16,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,80,Occupancy Status|vav-16,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,81,Secondary Communication Status|vav-16,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,82,Timed Override Status|vav-16,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,83,Communication Status|vav-17,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,84,Heat Cool Mode Status|vav-17,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,85,Occupancy Status|vav-17,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,86,Secondary Communication Status|vav-17,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,87,Timed Override Status|vav-17,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,88,Communication Status|vav-18,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,89,Heat Cool Mode Status|vav-18,[2] Heat,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,90,Occupancy Status|vav-18,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,91,Secondary Communication Status|vav-18,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,92,Timed Override Status|vav-18,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,93,Communication Status|vav-19,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,94,Heat Cool Mode Status|vav-19,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,95,Occupancy Status|vav-19,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,96,Secondary Communication Status|vav-19,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,97,Timed Override Status|vav-19,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,98,Communication Status|vav-20,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,99,Heat Cool Mode Status|vav-20,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,100,Occupancy Status|vav-20,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,101,Secondary Communication Status|vav-20,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,102,Timed Override Status|vav-20,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,103,Communication Status|vav-21,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,104,Heat Cool Mode Status|vav-21,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,105,Occupancy Status|vav-21,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,106,Secondary Communication Status|vav-21,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,107,Timed Override Status|vav-21,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,108,Communication Status|vav-22,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,109,Heat Cool Mode Status|vav-22,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,110,Occupancy Status|vav-22,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,111,Secondary Communication Status|vav-22,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,112,Timed Override Status|vav-22,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,113,Communication Status|vav-23,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,114,Heat Cool Mode Status|vav-23,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,115,Occupancy Status|vav-23,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,116,Secondary Communication Status|vav-23,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,117,Timed Override Status|vav-23,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,118,Communication Status|vav-24,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,119,Heat Cool Mode Status|vav-24,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,120,Occupancy Status|vav-24,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,121,Secondary Communication Status|vav-24,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,122,Timed Override Status|vav-24,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,123,Communication Status|vav-25,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,124,Heat Cool Mode Status|vav-25,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,125,Occupancy Status|vav-25,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,126,Secondary Communication Status|vav-25,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,127,Timed Override Status|vav-25,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,128,Communication Status|vav-26,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,129,Heat Cool Mode Status|vav-26,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,130,Occupancy Status|vav-26,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,131,Secondary Communication Status|vav-26,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,132,Timed Override Status|vav-26,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,133,Communication Status|vav-27,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,134,Heat Cool Mode Status|vav-27,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,135,Occupancy Status|vav-27,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,136,Secondary Communication Status|vav-27,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,137,Timed Override Status|vav-27,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,138,Communication Status|vav-28,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,139,Heat Cool Mode Status|vav-28,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,140,Occupancy Status|vav-28,[2] Unoccupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Input,141,Secondary Communication Status|vav-28,[3] Communicating,,"[1]=Not Communicating, [2]=Unresolved, [3]=Communicating, [4]=Startup"
+Multi State Input,142,Timed Override Status|vav-28,[1] Idle,,"[1]=Idle, [2]=On, [3]=Cancel"
+Multi State Input,143,occupancyStatus|APEC Classrooms Area-1,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Bypass, [4]=Standby"
+Multi State Input,144,operatingMode|APEC Classrooms Area-1,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Optimal Start, [4]=Humidity Pulldown, [5]=Optimal Stop, [6]=Unoccupied Heating/Cooling, [7]=Night Purge, [8]=Unoccupied Humidify, [9]=Unoccupied Dehumidify"
+Multi State Input,145,heatCoolModeStatus|APEC Classrooms Area-1,[4] Cool,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,146,economizerStatus|APEC Classrooms Area-1,[3] Auto,,"[1]=Disabled, [2]=Enabled, [3]=Auto"
+Multi State Input,147,occupancyStatus|APEC Offices Area-2,[1] Occupied,,"[1]=Occupied, [2]=Unoccupied, [3]=Bypass, [4]=Standby"
+Multi State Input,148,operatingMode|APEC Offices Area-2,,,"[1]=Occupied, [2]=Unoccupied, [3]=Optimal Start, [4]=Humidity Pulldown, [5]=Optimal Stop, [6]=Unoccupied Heating/Cooling, [7]=Night Purge, [8]=Unoccupied Humidify, [9]=Unoccupied Dehumidify"
+Multi State Input,149,heatCoolModeStatus|APEC Offices Area-2,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Input,150,economizerStatus|APEC Offices Area-2,,,"[1]=Disabled, [2]=Enabled, [3]=Auto"
+Multi State Input,151,systemMode|VPEC AHU-1E VAS-1,,,"[1]=Off, [2]=Air Handler Startup Delay, [3]=On, [4]=Common Space VAV Shutdown Delay, [5]=System Balancing"
+Multi State Input,152,commonSpaceVavModeRequest|VPEC AHU-1E VAS-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Optimal Start, [4]=Humidity Pulldown, [5]=Optimal Stop, [6]=Unoccupied Heating/Cooling, [7]=Night Purge, [8]=Unoccupied Humidify, [9]=Unoccupied Dehumidify"
+Multi State Input,153,ductPressOptStatus|VPEC AHU-1E VAS-1,,,"[1]=Active, [2]=Disabled, [3]=No Vav Data, [4]=In Test, [5]=Max Heat, [6]=Ahu Off, [7]=Air Valve Closed"
+Multi State Input,154,ventOptStatus|VPEC AHU-1E VAS-1,,,"[1]=Active, [2]=Disabled, [3]=No Vav Data, [4]=Ahu Not Occupied, [5]=No Qualified VAVs"
+Multi State Input,155,operatingMode|VPEC AHU-1E VAS-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Optimal Start, [4]=Humidity Pulldown, [5]=Optimal Stop, [6]=Unoccupied Heating/Cooling, [7]=Night Purge, [8]=Unoccupied Humidify, [9]=Unoccupied Dehumidify"
+Multi State Input,156,occupancyStatus|VPEC AHU-1E VAS-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Bypass, [4]=Standby"
+Multi State Input,157,ahuModeRequest|VPEC AHU-1E VAS-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Optimal Start, [4]=Humidity Pulldown, [5]=Optimal Stop, [6]=Unoccupied Heating/Cooling, [7]=Night Purge, [8]=Unoccupied Humidify, [9]=Unoccupied Dehumidify"
+Multi State Output,1,Air Flow Override|vav-1,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,2,Heat Cool Mode Request|vav-1,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,3,Occupancy Request|vav-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,4,Water Valve Override|vav-1,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,5,Air Flow Override|vav-2,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,6,Heat Cool Mode Request|vav-2,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,7,Occupancy Request|vav-2,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,8,Water Valve Override|vav-2,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,9,Air Flow Override|vav-3,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,10,Heat Cool Mode Request|vav-3,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,11,Occupancy Request|vav-3,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,12,Water Valve Override|vav-3,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,13,Air Flow Override|vav-4,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,14,Heat Cool Mode Request|vav-4,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,15,Occupancy Request|vav-4,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,16,Water Valve Override|vav-4,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,17,Air Flow Override|vav-5,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,18,Heat Cool Mode Request|vav-5,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,19,Occupancy Request|vav-5,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,20,Water Valve Override|vav-5,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,21,Air Flow Override|vav-6,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,22,Heat Cool Mode Request|vav-6,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,23,Occupancy Request|vav-6,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,24,Water Valve Override|vav-6,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,25,Air Flow Override|vav-7,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,26,Heat Cool Mode Request|vav-7,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,27,Occupancy Request|vav-7,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,28,Water Valve Override|vav-7,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,29,Air Flow Override|vav-8,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,30,Heat Cool Mode Request|vav-8,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,31,Occupancy Request|vav-8,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,32,Water Valve Override|vav-8,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,33,Air Flow Override|vav-9,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,34,Heat Cool Mode Request|vav-9,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,35,Occupancy Request|vav-9,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,36,Water Valve Override|vav-9,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,37,Air Flow Override|vav-10,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,38,Heat Cool Mode Request|vav-10,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,39,Occupancy Request|vav-10,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,40,Water Valve Override|vav-10,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,41,Air Flow Override|vav-11,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,42,Heat Cool Mode Request|vav-11,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,43,Occupancy Request|vav-11,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,44,Water Valve Override|vav-11,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,45,Air Flow Override|vav-12,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,46,Heat Cool Mode Request|vav-12,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,47,Occupancy Request|vav-12,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,48,Water Valve Override|vav-12,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,49,Air Flow Override|vav-13,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,50,Heat Cool Mode Request|vav-13,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,51,Occupancy Request|vav-13,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,52,Water Valve Override|vav-13,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,53,Air Flow Override|vav-14,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,54,Heat Cool Mode Request|vav-14,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,55,Occupancy Request|vav-14,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,56,Water Valve Override|vav-14,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,57,Air Flow Override|vav-15,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,58,Heat Cool Mode Request|vav-15,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,59,Occupancy Request|vav-15,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,60,Water Valve Override|vav-15,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,61,Air Flow Override|vav-16,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,62,Heat Cool Mode Request|vav-16,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,63,Occupancy Request|vav-16,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,64,Water Valve Override|vav-16,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,65,Air Flow Override|vav-17,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,66,Heat Cool Mode Request|vav-17,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,67,Occupancy Request|vav-17,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,68,Water Valve Override|vav-17,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,69,Air Flow Override|vav-18,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,70,Heat Cool Mode Request|vav-18,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,71,Occupancy Request|vav-18,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,72,Water Valve Override|vav-18,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,73,Air Flow Override|vav-19,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,74,Heat Cool Mode Request|vav-19,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,75,Occupancy Request|vav-19,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,76,Water Valve Override|vav-19,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,77,Air Flow Override|vav-20,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,78,Heat Cool Mode Request|vav-20,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,79,Occupancy Request|vav-20,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,80,Water Valve Override|vav-20,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,81,Air Flow Override|vav-21,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,82,Heat Cool Mode Request|vav-21,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,83,Occupancy Request|vav-21,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,84,Water Valve Override|vav-21,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,85,Air Flow Override|vav-22,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,86,Heat Cool Mode Request|vav-22,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,87,Occupancy Request|vav-22,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,88,Water Valve Override|vav-22,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,89,Air Flow Override|vav-23,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,90,Heat Cool Mode Request|vav-23,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,91,Occupancy Request|vav-23,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,92,Water Valve Override|vav-23,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,93,Air Flow Override|vav-24,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,94,Heat Cool Mode Request|vav-24,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,95,Occupancy Request|vav-24,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,96,Water Valve Override|vav-24,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,97,Air Flow Override|vav-25,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,98,Heat Cool Mode Request|vav-25,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,99,Occupancy Request|vav-25,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,100,Water Valve Override|vav-25,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,101,Air Flow Override|vav-26,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,102,Heat Cool Mode Request|vav-26,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,103,Occupancy Request|vav-26,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,104,Water Valve Override|vav-26,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,105,Air Flow Override|vav-27,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,106,Heat Cool Mode Request|vav-27,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,107,Occupancy Request|vav-27,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,108,Water Valve Override|vav-27,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,109,Air Flow Override|vav-28,,,"[1]=Air Valves Auto Control, [2]=Not Used, [3]=Not Used, [4]=Air Valves Controlled to Percentage, [5]=Air Valves Full Open, [6]=Air Valves Full Closed, [7]=Air Valves Minimum Setpoint, [8]=Air Valves Maximum Setpoint"
+Multi State Output,110,Heat Cool Mode Request|vav-28,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,111,Occupancy Request|vav-28,,,"[1]=Occupied, [2]=Unoccupied, [3]=Occupied Bypass, [4]=Occupied Standby, [5]=Auto"
+Multi State Output,112,Water Valve Override|vav-28,,,"[1]=Off, [2]=Not Valid, [3]=Not Valid, [4]=Not Valid, [5]=Open, [6]=Close"
+Multi State Output,113,occupancy|APEC Classrooms Area-1,,,"[1]=Occupied, [2]=Unoccupied, [3]=Bypass, [4]=Standby"
+Multi State Output,114,heatCoolInputRequest|APEC Classrooms Area-1,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,115,timedOverride|APEC Classrooms Area-1,,,"[1]=TOV auto, [2]=TOV on, [3]=TOV cancel"
+Multi State Output,116,occupancy|APEC Offices Area-2,,,"[1]=Occupied, [2]=Unoccupied, [3]=Bypass, [4]=Standby"
+Multi State Output,117,heatCoolInputRequest|APEC Offices Area-2,,,"[1]=Auto, [2]=Heat, [3]=Morning Warm-up, [4]=Cool, [5]=Night Purge, [6]=Pre Cool, [7]=Off, [8]=Test, [9]=Emergency Heat, [10]=Fan Only, [11]=Free Cool, [12]=Ice-Making, [13]=Max Heat, [14]=Economizer, [15]=Dehumidify, [16]=Calibrate"
+Multi State Output,118,timedOverride|APEC Offices Area-2,,,"[1]=TOV auto, [2]=TOV on, [3]=TOV cancel"

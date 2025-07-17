@@ -10,7 +10,7 @@ import BAC0
 from BAC0.core.devices.local.factory import (
     analog_input, analog_output,
     binary_output,
-    multistate_input, multistate_value
+    multistate_input, multistate_output, multistate_value
 )
 
 # ──────────────── CLI ────────────────────────────────────────────────────────
@@ -57,6 +57,16 @@ def add_mi(app, inst, name, states, val=1, desc=""):
                      stateText=states,
                      presentValue=val
                      ).add_objects_to_application(app)
+    return app[name]
+
+def add_mo(app, inst, name, states, val=1, desc=""):
+    multistate_output(instance=inst, name=name,
+                      numberOfStates=len(states),
+                      description=desc or name,
+                      stateText=states,
+                      presentValue=val,
+                      relinquish_default=val          # commandable
+                      ).add_objects_to_application(app)
     return app[name]
 
 def add_mv(app, inst, name, states, val=1, desc=""):
